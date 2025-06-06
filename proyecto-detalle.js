@@ -49,7 +49,7 @@ const proyectos = {
             '2. Haz clic en dos cartas para encontrar coincidencias',
             '3. Encuentra todos los pares para ganar',
             '4. Revisa tu posición en el ranking',
-            '5. ¡Comparte tus resultados en redes sociales'
+            '5. ¡Comparte tus resultados en redes sociales!'
         ]
     },
     'calculadora-ip': {
