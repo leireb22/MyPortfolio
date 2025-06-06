@@ -20,10 +20,10 @@ const proyectos = {
         github: 'https://github.com/leireb22/memorion',
         imagenes: [
             'images/icon/memorion.png',
-            'images/memorion/memorion-1.jpg',
-            'images/memorion/memorion-2.jpg',
-            'images/memorion/memorion-3.jpg',
-            'images/memorion/memorion-4.jpg',
+            'images/memorion/memorion1.jpg',
+            'images/memorion/memorion2.jpg',
+            'images/memorion/memorion3.jpg',
+            'images/memorion/memorion4.jpg',
         ],
         detallesTecnicos: {
             frontend: 'HTML5, CSS3, JavaScript',
