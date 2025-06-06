@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leire Batalla - Portafolio</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="apple-touch-icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="logo-container">
+                    <img src="../images/logo.png" alt="Logo" class="logo-img">
+                    <div class="name-container">
+                        <h1 class="logo">Leire Batalla</h1>
+                        <p class="tagline" data-i18n="Desarrolladora Web">Desarrolladora Web</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <nav class="header-nav">
+                    <a href="#inicio" class="nav-button" data-i18n="Inicio">Inicio</a>
+                    <a href="#datos-personales" class="nav-button" data-i18n="Datos personales">Datos personales</a>
+                    <a href="#formacion" class="nav-button" data-i18n="Formación">Formación</a>
+                    <a href="#experiencia" class="nav-button" data-i18n="Experiencia">Experiencia</a>
+                    <a href="#habilidades" class="nav-button" data-i18n="Habilidades">Habilidades</a>
+                    <a href="#contacto" class="nav-button" data-i18n="Contacto">Contacto</a>
+                </nav>
+                <div class="language-container">
+                    <button id="language-toggle" class="language-toggle" aria-label="Cambiar idioma">
+                        <span class="lang-es">ES</span>
+                        <span class="lang-en">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- contenido principal -->
+    <main class="main-content">
+        <section id="inicio" class="section">
+            <div class="hero-container">
+                <div class="profile-card">
+                    <h1 data-i18n="¡Hola, soy Leire Batalla!">¡Hola, soy Leire Batalla!</h1>
+                    <p class="description"
+                        data-i18n="Estudiante de desarrollo web y móvil con mente creativa y pasión por el código. Combino tecnología y diseño para crear soluciones funcionales y visuales.">
+                        Estudiante de desarrollo web y móvil con mente creativa y pasión por el código.
+                        Combino tecnología y diseño para crear soluciones funcionales y visuales.</p>
+
+                    <div class="action-buttons">
+                        <a href="../html/proyectos.html" class="action-button primary" data-i18n="Proyectos">Proyectos</a>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/leire-batalla-88b046334/" target="_blank"
+                                class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/leireb22" target="_blank" class="social-link"
+                                aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:leirebatalla@gmail.com" class="social-link" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-image">
+                    <img src="../images/yo2.jpg" alt="Leire Batalla" class="profile-photo">
+                </div>
+            </div>
+        </section>
+
+        <section id="datos-personales" class="section">
+            <h2 data-i18n="Datos Personales">Datos Personales</h2>
+            <div class="section-content">
+                <div class="personal-info">
+                    <div class="info-card">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="Nombre completo:">Nombre completo:</span>
+                                <span class="info-value" data-i18n="Leire Antón Batalla">Leire Antón Batalla</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="Fecha de nacimiento:">Fecha de nacimiento:</span>
+                                <span class="info-value" data-i18n="17 de diciembre de 2004">17 de diciembre de 2004</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="Nacionalidad:">Nacionalidad:</span>
+                                <span class="info-value" data-i18n="Española">Española</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="Dirección:">Dirección:</span>
+                                <span class="info-value" data-i18n="C/ Los Robles 30, Sahagún, León (CP 24320)">C/ Los Robles 30, Sahagún, León (CP 24320)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="Teléfono:">Teléfono:</span>
+                                <span class="info-value" data-i18n="+34 608 505 017">+34 608 505 017</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="Correo electrónico:">Correo electrónico:</span>
+                                <span class="info-value" data-i18n="leirebatalla@gmail.com">leirebatalla@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="Idiomas:">Idiomas:</span>
+                                <span class="info-value" data-i18n="Español (nativo), Inglés (fluido)">Español (nativo), Inglés (fluido)</span>
+                            </div>
+                        </div>
+                        <div class="cv-buttons-container">
+                            <a href="../doc/CV Europass Spanish.pdf" target="_blank" class="action-button primary"
+                                id="view-cv-es">
+                                <i class="fas fa-file-pdf"></i> CV en Español
+                            </a>
+                            <a href="../doc/CV Europass English.pdf" target="_blank" class="action-button secondary"
+                                id="view-cv-en">
+                                <i class="fas fa-file-pdf"></i> CV in English
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacion" class="section">
+            <h2 data-i18n="Formación Académica">Formación Académica</h2>
+            <div class="section-content">
+                <div class="education-item">
+                    <h3 data-i18n="Desarrollo de Aplicaciones Web">Desarrollo de Aplicaciones Web</h3>
+                    <p class="education-period" data-i18n="2024 - Actualidad (2 años)">2024 - Actualidad (2 años)</p>
+                    <a href="https://www.google.es/maps/place/Instituto+de+Educaci%C3%B3n+Secundaria+y+Ciclos+Formativos+San+Andr%C3%A9s/@42.6177059,-5.6225379,17z/data=!3m1!4b1!4m6!3m5!1s0xd379ba700ff25cb:0xdca63bb026ec7139!8m2!3d42.617702!4d-5.619963!16s%2Fg%2F119tz6m42?hl=es&entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank" rel="noopener noreferrer" class="education-institution"
+                        data-i18n="IES San Andrés, León">
+                        IES San Andrés, León
+                    </a>
+                </div>
+                <div class="education-item">
+                    <h3 data-i18n="Bachillerato de Artes">Bachillerato de Artes</h3>
+                    <p class="education-period" data-i18n="2020 - 2022 (2 años)">2020 - 2022 (2 años)</p>
+                    <a href="https://www.google.es/maps/place/Escuela+de+Arte+y+Superior+de+Conservaci%C3%B3n+y+Restauraci%C3%B3n+de+Bienes+Culturales+de+Le%C3%B3n/@42.5999819,-5.5701642,16z/data=!3m1!4b1!4m6!3m5!1s0xd379a9b7a3cc395:0xe6ee7f103a9419d5!8m2!3d42.599978!4d-5.5675893!16s%2Fg%2F1tt1tzxp?hl=es&entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank" rel="noopener noreferrer" class="education-institution"
+                        data-i18n="Escuela de Arte y Superior de Conservación, León">
+                        Escuela de Arte y Superior de Conservación, León
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="section">
+            <h2 data-i18n="Experiencia Laboral">Experiencia Laboral</h2>
+            <div class="section-content">
+                <div class="experience-item">
+                    <h3 data-i18n="Prácticas de Desarrollo de Aplicaciones Web">Prácticas de Desarrollo de Aplicaciones Web</h3>
+                    <p class="experience-period" data-i18n="2024 - 1º Curso DAW">2024 - 1º Curso DAW</p>
+                    <p class="experience-description" data-i18n="Durante mi primer año de Desarrollo de Aplicaciones Web, he realizado diversos proyectos que demuestran mis habilidades técnicas y creativas. Puedes ver algunos de estos trabajos en la sección de Proyectos de este portafolio, donde he aplicado mis conocimientos en programación, diseño de interfaces y desarrollo web.">
+                        Durante mi primer año de Desarrollo de Aplicaciones Web, he realizado diversos proyectos que demuestran mis habilidades técnicas y creativas. Puedes ver algunos de estos trabajos en la sección de Proyectos de este portafolio, donde he aplicado mis conocimientos en programación, diseño de interfaces y desarrollo web.
+                    </p>
+                </div>
+                
+                <div class="experience-item">
+                    <h3 data-i18n="Experiencia en Hostelería">Experiencia en Hostelería</h3>
+                    <p class="experience-period" data-i18n="Varios periodos">Varios periodos</p>
+                    <p class="experience-description" data-i18n="Amplia experiencia en atención al público en el sector de la hostelería, donde he desarrollado habilidades clave como:">
+                        Amplia experiencia en atención al público en el sector de la hostelería, donde he desarrollado habilidades clave como:
+                    </p>
+                    <ul class="experience-skills">
+                        <li data-i18n="Excelente trato al cliente y comunicación efectiva">Excelente trato al cliente y comunicación efectiva</li>
+                        <li data-i18n="Capacidad para trabajar bajo presión en entornos dinámicos">Capacidad para trabajar bajo presión en entornos dinámicos</li>
+                        <li data-i18n="Trabajo en equipo y coordinación con compañeros">Trabajo en equipo y coordinación con compañeros</li>
+                        <li data-i18n="Resolución de problemas y gestión de imprevistos">Resolución de problemas y gestión de imprevistos</li>
+                        <li data-i18n="Adaptabilidad a diferentes situaciones y necesidades del cliente">Adaptabilidad a diferentes situaciones y necesidades del cliente</li>
+                        <li data-i18n="Orientación a resultados con enfoque en la satisfacción del cliente">Orientación a resultados con enfoque en la satisfacción del cliente</li>
+                    </ul>
+                    <p class="experience-description" data-i18n="Esta experiencia me ha permitido desarrollar una actitud proactiva, capacidad de aprendizaje rápido y una gran capacidad de adaptación a diferentes entornos laborales, habilidades que aplico en mi desarrollo profesional en el ámbito tecnológico.">
+                        Esta experiencia me ha permitido desarrollar una actitud proactiva, capacidad de aprendizaje rápido y una gran capacidad de adaptación a diferentes entornos laborales, habilidades que aplico en mi desarrollo profesional en el ámbito tecnológico.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="section">
+            <h2 data-i18n="Habilidades y Competencias">Habilidades y Competencias</h2>
+            <div class="section-content">
+                <div class="skills-container">
+                    <div class="skills-column">
+                        <h3 data-i18n="Habilidades Técnicas">Habilidades Técnicas</h3>
+                        <div class="skill-category">
+                            <h4 data-i18n="Lenguajes:">Lenguajes:</h4>
+                            <p data-i18n="JavaScript, HTML, CSS, Java, C#, SQL">JavaScript, HTML, CSS, Java, C#, SQL
+                            </p>
+                            <div class="skills-icons">
+                                <img src="../images/small/c.png" alt="C" title="C" class="skill-icon">
+                                <img src="../images/small/java.png" alt="Java" title="Java" class="skill-icon">
+                                <img src="../images/small/js.webp" alt="JavaScript" title="JavaScript" class="skill-icon">
+                                <img src="../images/small/html.png" alt="HTML" title="HTML" class="skill-icon">
+                                <img src="../images/small/css.webp" alt="CSS" title="CSS" class="skill-icon">
+                                <img src="../images/small/sql.png" alt="SQL" title="SQL" class="skill-icon">
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-i18n="Herramientas y Entornos:">Herramientas y Entornos:</h4>
+                            <p data-i18n="Velneo, XAMPP, Apache, Git/GitHub, Visual Studio Code">Velneo, XAMPP, Apache,
+                                Git/GitHub, Visual Studio Code</p>
+                            <div class="skills-icons">
+                                <img src="../images/small/github.png" alt="GitHub" title="GitHub" class="skill-icon">
+                                <img src="../images/small/xampp.webp" alt="XAMPP" title="XAMPP" class="skill-icon">
+                                <img src="../images/small/vscode.png" alt="Visual Studio Code" title="Visual Studio Code"
+                                    class="skill-icon">
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-i18n="Bases de datos:">Bases de datos:</h4>
+                            <p data-i18n="MySQL">MySQL</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-i18n="Diseño:">Diseño:</h4>
+                            <p data-i18n="Diseño gráfico y digital, fundamentos de UX/UI">Diseño gráfico y digital,
+                                fundamentos de UX/UI</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-i18n="Otros:">Otros:</h4>
+                            <p data-i18n="Responsive Web Design, maquetación web, lenguajes de marcas (HTML, XML)">
+                                Responsive Web Design, maquetación web, lenguajes de marcas (HTML, XML)</p>
+                        </div>
+                    </div>
+                    <div class="skills-column">
+                        <h3 data-i18n="Habilidades Personales">Habilidades Personales</h3>
+                        <ul class="personal-skills">
+                            <li data-i18n="Aprendizaje rápido y autodidacta">Aprendizaje rápido y autodidacta</li>
+                            <li data-i18n="Creatividad y sensibilidad estética">Creatividad y sensibilidad estética</li>
+                            <li data-i18n="Resolución de problemas">Resolución de problemas</li>
+                            <li data-i18n="Trabajo en equipo">Trabajo en equipo</li>
+                            <li data-i18n="Organización y responsabilidad">Organización y responsabilidad</li>
+                            <li data-i18n="Atención al detalle">Atención al detalle</li>
+                            <li data-i18n="Comunicación eficaz">Comunicación eficaz</li>
+                            <li data-i18n="Idiomas">Idiomas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="courses-section">
+                    <h3 data-i18n="Cursos">Cursos</h3>
+                    <div class="course-item">
+                        <div class="course-info">
+                            <h4 data-i18n="Fundamentos de Linux">Fundamentos de Linux</h4>
+                            <p data-i18n="Linux Essentials - Cisco Networking Academy">Linux Essentials - Cisco Networking
+                                Academy</p>
+                            <a href="_certificate_leyre-antbat-educa-jcyl-es_8c7b9e95-845a-411f-992f-b42ef1ae9e2d.pdf"
+                                target="_blank" class="certificate-link" data-i18n="Ver certificado">
+                                Ver certificado
+                            </a>
+                        </div>
+                        <div class="course-badge">
+                            <img src="../images/small/linux-essentials.png" alt="Linux Essentials Badge" class="badge-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contacto" class="section">
+            <h2 data-i18n="Contacto">Contacto</h2>
+            <div class="section-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:leirebatalla@gmail.com"
+                            data-i18n="leirebatalla@gmail.com">leirebatalla@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+34608505017" data-i18n="+34 608 505 017">+34 608 505 017</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-i18n="Sahagún, León, España">Sahagún, León, España</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/leire-batalla-88b046334/" target="_blank"
+                            rel="noopener noreferrer" data-i18n="LinkedIn">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/leirebatalla" target="_blank" rel="noopener noreferrer"
+                            data-i18n="GitHub">GitHub</a>
+                    </div>
+                </div>
+                <div class="contact-closing">
+                    <p data-i18n="Estoy abierta a oportunidades de aprendizaje, colaboración y crecimiento profesional.">
+                        Estoy abierta a oportunidades de aprendizaje, colaboración y crecimiento profesional.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                &copy; <span id="current-year"></span> Leire Batalla
+            </div>
+            <div class="footer-contact">
+                <span><i class="fas fa-envelope"></i> leirebatalla@gmail.com</span>
+                <span><i class="fas fa-phone"></i> +34 608 505 017</span>
+            </div>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/leire-batalla-88b046334/" target="_blank" class="social-link"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/leireb22" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/proyectos.js"></script>
+    <script>
+        // Actualizar el año actual en el footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

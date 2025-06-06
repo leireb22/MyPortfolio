@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Proyecto - Mi Portfolio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/proyecto-detalle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="logo-container">
+                    <img src="../images/logo.png" alt="Logo" class="logo-img">
+                    <div class="name-container">
+                        <h1 class="logo">Leire Batalla</h1>
+                        <p class="tagline" data-i18n="Desarrolladora Web">Desarrolladora Web</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <nav class="header-nav">
+                    <a href="../html/index.html" class="nav-button" data-i18n="Inicio">Inicio</a>
+                    <a href="../html/proyectos.html" class="nav-button" data-i18n="Proyectos">Proyectos</a>
+                </nav>
+                <div class="language-container">
+                    <button id="language-toggle" class="language-toggle" aria-label="Cambiar idioma" onclick="toggleLanguage()">
+                        <span class="lang-es">ES</span>
+                        <span class="lang-en">EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="project-detail-container">
+        <div class="back-button-container">
+            <button onclick="window.history.back()" class="back-button">
+                <i class="fas fa-arrow-left"></i> <span data-i18n="Volver a Proyectos">Volver a Proyectos</span>
+            </button>
+        </div>
+        
+        <article class="project-article">
+            <h1 id="project-title" class="project-title">Cargando proyecto...</h1>
+            
+            <div class="project-meta">
+                <span class="project-date"><span data-i18n="Fecha">Fecha</span>: <span id="project-date">Cargando...</span></span>
+                <span class="project-tech"><span data-i18n="Tecnologías">Tecnologías</span>: <span id="project-tech">Cargando...</span></span>
+            </div>
+            
+            <div class="project-content">
+                <!-- Sección de Descripción -->
+                <div class="project-description">
+                    <h2>Descripción</h2>
+                    <p id="project-description">Cargando descripción...</p>
+                </div>
+
+                <!-- Sección de Características Principales -->
+                <div class="project-features">
+                    <h2>Características principales</h2>
+                    <ul class="features-list" id="features-list">
+                        <!-- Las características se cargarán aquí dinámicamente -->
+                    </ul>
+                </div>
+
+                    <!-- Sección de Cómo Usar/Jugar -->
+                    <div id="gameplay-section" class="gameplay-section">
+                        <!-- Contenido para el Memorion -->
+                        <div id="memorion-gameplay" class="project-gameplay" style="display: none;">
+                            <h2>Cómo jugar</h2>
+                            <div class="explanation-content">
+                                <div class="explanation-image">
+                                    <img src="../images/memorion/memorion1.jpg" alt="Partida en curso" class="game-screenshot">
+                                </div>
+                                <div class="explanation-text">
+                                    <ol class="game-steps" id="memorion-steps">
+                                        <!-- Los pasos se cargarán dinámicamente -->
+                                    </ol>
+                                </div>
+                                <div class="explanation-image">
+                                    <img src="../images/memorion/memorion2.jpg" alt="Pantalla de rankings" class="game-screenshot">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contenido para la Calculadora IP -->
+                        <div id="calculadora-gameplay" class="project-gameplay" style="display: none;">
+                            <h2>Cómo usar</h2>
+                            <div class="explanation-content">
+                                <div class="explanation-image">
+                                    <img src="../images/ip/ip1.jpg" alt="Interfaz de la calculadora" class="game-screenshot">
+                                </div>
+                                <div class="explanation-text">
+                                    <ol class="game-steps" id="calculadora-steps">
+                                        <!-- Los pasos se cargarán dinámicamente -->
+                                    </ol>
+                                </div>
+                                <div class="explanation-image">
+                                    <img src="../images/ip/ip2.jpg" alt="Ejemplo de operación" class="game-screenshot">
+                                </div>
+                                <div class="explanation-image">
+                                    <img src="../images/ip/ip3.jpg" alt="Resultado de operación" class="game-screenshot">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contenido para Google Maps -->
+                        <div id="google-maps-gameplay" class="project-gameplay" style="display: none;">
+                            <h2>Cómo usar</h2>
+                            <div class="explanation-content">
+                                <div class="explanation-image">
+                                    <img src="../images/maps/maps1.jpg" alt="Vista general del mapa" class="game-screenshot">
+                                </div>
+                                <div class="explanation-text">
+                                    <ol class="game-steps" id="google-maps-steps">
+                                        <!-- Los pasos se cargarán dinámicamente -->
+                                    </ol>
+                                </div>
+                                <div class="explanation-image">
+                                    <img src="../images/maps/maps2.jpg" alt="Vista detallada con marcadores" class="game-screenshot">
+                                </div>
+                                <div class="explanation-image">
+                                    <img src="../images/maps/maps3.jpg" alt="Búsqueda de ubicaciones" class="game-screenshot">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección de Explicación del Código -->
+                    <section class="code-explanation-section" id="code-explanation-section">
+                        <h2>Explicación del Código</h2>
+                        
+                        <!-- Contenido para la Calculadora IP -->
+                        <div id="calculadora-code-details" class="project-code-details" style="display: none;">
+                            <div class="tech-description">
+                                <h3>Tecnologías utilizadas</h3>
+                                <ul>
+                                    <li><strong>HTML:</strong> Estructura de la interfaz de la calculadora.</li>
+                                    <li><strong>CSS:</strong> Estilos visuales y diseño responsivo.</li>
+                                    <li><strong>JavaScript:</strong> Lógica de la calculadora y manejo de eventos.</li>
+                                </ul>
+                            </div>
+
+                            <div class="tech-description">
+                                <h3>Características clave</h3>
+                                <ul>
+                                    <li>Interfaz intuitiva y fácil de usar</li>
+                                    <li>Soporte para operaciones matemáticas básicas</li>
+                                    <li>Diseño responsivo que se adapta a diferentes dispositivos</li>
+                                    <li>Código limpio y bien organizado</li>
+                                </ul>
+                            </div>
+
+                            <div class="code-screenshots">
+                                <div class="code-screenshot">
+                                    <img src="../images/ip/ip4.jpg" alt="Código JavaScript de la calculadora">
+                                </div>
+                                <div class="code-screenshot">
+                                    <img src="../images/ip/ip5.jpg" alt="Estructura HTML de la calculadora">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contenido para el Memorion -->
+                        <div id="memorion-code-details" class="project-code-details" style="display: none;">
+                            <div class="tech-description">
+                                <h3>Tecnologías utilizadas</h3>
+                                <ul>
+                                    <li><strong>HTML:</strong> Estructura la página y los elementos del juego (tablero, cartas, contadores).</li>
+                                    <li><strong>CSS:</strong> Define el estilo visual del juego (diseño, colores, animaciones).</li>
+                                    <li><strong>JavaScript:</strong> Implementa la lógica del juego (creación del tablero, volteo de cartas, comparación, control del tiempo y movimientos, detección de victoria).</li>
+                                </ul>
+                            </div>
+
+                            <div class="tech-description">
+                                <h3>Funcionalidades clave</h3>
+                                <ul>
+                                    <li>Generación dinámica del tablero de juego.</li>
+                                    <li>Manejo de eventos de clic para voltear las cartas.</li>
+                                    <li>Lógica para comparar las cartas y determinar si coinciden.</li>
+                                    <li>Contador de movimientos y temporizador.</li>
+                                    <li>Detección de la condición de victoria.</li>
+                                </ul>
+                            </div>
+
+                            <div class="code-screenshots">
+                                <div class="code-screenshot">
+                                    <img src="../images/memorion/memorion3.jpg" alt="Código JavaScript del juego">
+                                </div>
+                                <div class="code-screenshot">
+                                    <img src="../images/memorion/memorion4.jpg" alt="Estructura HTML del juego">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contenido para Google Maps -->
+                        <div id="google-maps-code-details" class="project-code-details" style="display: none;">
+                            <div class="tech-description">
+                                <h3>Estructura del Proyecto</h3>
+                                <ul>
+                                    <li><strong>index.html:</strong> Contiene la estructura básica de la página web y la referencia a la API de Google Maps.</li>
+                                    <li><strong>style.css:</strong> Define el estilo visual del mapa y la página web.</li>
+                                    <li><strong>script.js:</strong> Contiene la lógica para inicializar y configurar el mapa.</li>
+                                </ul>
+                            </div>
+
+                            <div class="tech-description">
+                                <h3>Función Principal</h3>
+                                <p><strong>initMap():</strong> Función que se encarga de crear y configurar el mapa.</p>
+                                <ul>
+                                    <li>Crea un nuevo objeto <code>google.maps.Map</code> asociado al elemento HTML.</li>
+                                    <li>Configura las opciones del mapa (centro, zoom, tipo de mapa).</li>
+                                    <li>Puede añadir marcadores personalizados.</li>
+                                    <li>Maneja eventos de interacción del usuario.</li>
+                                </ul>
+                            </div>
+
+                            <div class="code-screenshots">
+                                <div class="code-screenshot">
+                                    <img src="../images/maps/maps4.jpg" alt="Código de inicialización del mapa">
+                                </div>
+                                <div class="code-screenshot">
+                                    <img src="../images/maps/maps5.jpg" alt="Estructura HTML del mapa">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Sección de Detalles Técnicos -->
+                    <div class="technical-details" id="technical-details" style="display: none;">
+                        <h2>Detalles técnicos</h2>
+                        <div class="tech-stack">
+                            <h3>Tecnologías utilizadas</h3>
+                            <ul class="tech-list" id="tech-stack-list">
+                                <!-- Las tecnologías se cargarán dinámicamente -->
+                            </ul>
+                        </div>
+                        <div class="code-features" id="code-features" style="display: none;">
+                            <h3>Características implementadas</h3>
+                            <ul class="feature-list" id="advanced-features-list">
+                                <!-- Las características avanzadas se cargarán dinámicamente -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Sección de Resumen del Funcionamiento -->
+                    <div class="code-section">
+                        <h2>Resumen del funcionamiento</h2>
+                        <div class="cards-container">
+                            <!-- Tarjeta 1: Estructura del Proyecto -->
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </div>
+                                <h3>Estructura del Proyecto</h3>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-code"></i> <strong>HTML:</strong> Estructura del tablero, contador y temporizador</li>
+                                    <li><i class="fab fa-css3-alt"></i> <strong>CSS:</strong> Diseño visual y animaciones</li>
+                                    <li><i class="fab fa-js"></i> <strong>JavaScript:</strong> Lógica principal del juego</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Tarjeta 2: Características -->
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3>Características</h3>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-th"></i> Generación dinámica del tablero</li>
+                                    <li><i class="fas fa-mouse-pointer"></i> Manejo de eventos de usuario</li>
+                                    <li><i class="fas fa-tachometer-alt"></i> Control de flujo del juego</li>
+                                    <li><i class="fas fa-cogs"></i> Funciones auxiliares</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Tarjeta 3: Archivos -->
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-folder-open"></i>
+                                </div>
+                                <h3>Archivos Principales</h3>
+                                <ul class="file-list">
+                                    <li><i class="fab fa-html5"></i> <code>index.html</code></li>
+                                    <li><i class="fab fa-css3-alt"></i> <code>style.css</code></li>
+                                    <li><i class="fab fa-js"></i> <code>script.js</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-actions">
+                <div class="action-buttons">
+                    <a href="https://leireb22.github.io/memorion/" id="project-demo" class="action-button primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Ver Demo</span>
+                    </a>
+                    <a href="https://github.com/bamotta/memorion.git" id="project-github" class="action-button secondary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                        <span>Ver Código</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-copyright">
+                &copy; <span id="current-year"></span> Leire Batalla
+            </div>
+            <div class="footer-contact">
+                <span><i class="fas fa-envelope"></i> leirebatalla@gmail.com</span>
+                <span><i class="fas fa-phone"></i> +34 608 505 017</span>
+            </div>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/leire-batalla-88b046334/" target="_blank" class="social-link"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/leireb22" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/proyecto-detalle.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script>
+        // Inicializar i18n
+        // La inicialización se maneja desde i18n.js
+    </script>
+    <script>
+        // Actualizar el año actual en el footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
