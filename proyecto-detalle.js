@@ -71,7 +71,7 @@ const proyectos = {
         demo: 'https://leireb22.github.io/Calculadora_IP/',
         github: 'https://github.com/daylin12212/Calculadora_IP.git',
         imagenes: [
-            'images/icon/calculadora-ip.png',
+            'images/icon/calculadora.png',
             'images/ip/ip1.jpg',
             'images/ip/ip2.jpg',
             'images/ip/ip3.jpg',
