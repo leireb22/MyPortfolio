@@ -141,7 +141,7 @@
                         <h2>Explicación del Código</h2>
                         
                         <!-- Contenido para la Calculadora IP -->
-                        <div id="calculadora-code-details" class="project-code-details" style="display: none;">
+                        <div id="calculadora-ip-code-details" class="project-code-details" style="display: none;">
                             <div class="tech-description">
                                 <h3>Tecnologías utilizadas</h3>
                                 <ul>
@@ -219,7 +219,7 @@
                                 <p><strong>initMap():</strong> Función que se encarga de crear y configurar el mapa.</p>
                                 <ul>
                                     <li>Crea un nuevo objeto <code>google.maps.Map</code> asociado al elemento HTML.</li>
-                                    <li>Configura las opciones del mapa (centro, zoom, tipo de mapa).</li>
+                                    <li>Configura las opciones del mapa.</li>
                                     <li>Puede añadir marcadores personalizados.</li>
                                     <li>Maneja eventos de interacción del usuario.</li>
                                 </ul>
@@ -253,8 +253,8 @@
                         </div>
                     </div>
 
-                    <!-- Sección de Resumen del Funcionamiento -->
-                    <div class="code-section">
+                    <!-- Sección de Resumen del Funcionamiento para Memorion -->
+                    <div id="memorion-summary" class="code-section" style="display: none;">
                         <h2>Resumen del funcionamiento</h2>
                         <div class="cards-container">
                             <!-- Tarjeta 1: Estructura del Proyecto -->
@@ -264,36 +264,131 @@
                                 </div>
                                 <h3>Estructura del Proyecto</h3>
                                 <ul class="feature-list">
-                                    <li><i class="fas fa-code"></i> <strong>HTML:</strong> Estructura del tablero, contador y temporizador</li>
-                                    <li><i class="fab fa-css3-alt"></i> <strong>CSS:</strong> Diseño visual y animaciones</li>
-                                    <li><i class="fab fa-js"></i> <strong>JavaScript:</strong> Lógica principal del juego</li>
+                                    <li><i class="fas fa-code"></i> <strong>HTML:</strong> Estructura del tablero y controles</li>
+                                    <li><i class="fab fa-css3-alt"></i> <strong>CSS:</strong> Estilos visuales y animaciones</li>
+                                    <li><i class="fab fa-js"></i> <strong>JavaScript:</strong> Lógica del juego y manejo de eventos</li>
                                 </ul>
                             </div>
                             
                             <!-- Tarjeta 2: Características -->
                             <div class="feature-card">
                                 <div class="card-icon">
-                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-gamepad"></i>
                                 </div>
                                 <h3>Características</h3>
                                 <ul class="feature-list">
-                                    <li><i class="fas fa-th"></i> Generación dinámica del tablero</li>
-                                    <li><i class="fas fa-mouse-pointer"></i> Manejo de eventos de usuario</li>
-                                    <li><i class="fas fa-tachometer-alt"></i> Control de flujo del juego</li>
-                                    <li><i class="fas fa-cogs"></i> Funciones auxiliares</li>
+                                    <li><i class="fas fa-cog"></i> Configuración personalizable</li>
+                                    <li><i class="fas fa-tachometer-alt"></i> Diferentes niveles de dificultad</li>
+                                    <li><i class="fas fa-trophy"></i> Sistema de puntuación</li>
+                                    <li><i class="fas fa-mobile-alt"></i> Diseño responsivo</li>
                                 </ul>
                             </div>
                             
-                            <!-- Tarjeta 3: Archivos -->
+                            <!-- Tarjeta 3: Tecnologías -->
                             <div class="feature-card">
                                 <div class="card-icon">
-                                    <i class="fas fa-folder-open"></i>
+                                    <i class="fas fa-code-branch"></i>
                                 </div>
-                                <h3>Archivos Principales</h3>
-                                <ul class="file-list">
-                                    <li><i class="fab fa-html5"></i> <code>index.html</code></li>
-                                    <li><i class="fab fa-css3-alt"></i> <code>style.css</code></li>
-                                    <li><i class="fab fa-js"></i> <code>script.js</code></li>
+                                <h3>Tecnologías</h3>
+                                <ul class="feature-list">
+                                    <li><i class="fab fa-js"></i> JavaScript</li>
+                                    <li><i class="fab fa-html5"></i> HTML5</li>
+                                    <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                                    <li><i class="fas fa-database"></i> LocalStorage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sección de Resumen del Funcionamiento para Google Maps -->
+                    <div id="google-maps-summary" class="code-section" style="display: none;">
+                        <h2>Resumen del funcionamiento</h2>
+                        <div class="cards-container">
+                            <!-- Tarjeta 1: Estructura del Proyecto -->
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </div>
+                                <h3>Estructura del Proyecto</h3>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-code"></i> <strong>HTML:</strong> Contenedor del mapa y controles de interfaz</li>
+                                    <li><i class="fab fa-css3-alt"></i> <strong>CSS:</strong> Estilos del mapa y elementos interactivos</li>
+                                    <li><i class="fab fa-js"></i> <strong>JavaScript:</strong> Lógica de interacción con la API de Google Maps</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Tarjeta 2: Características -->
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <h3>Características</h3>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-search-location"></i> Búsqueda de ubicaciones</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> Marcadores personalizados</li>
+                                    <li><i class="fas fa-info-circle"></i> Ventanas de información</li>
+                                    <li><i class="fas fa-mobile-alt"></i> Diseño responsivo</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Tarjeta 3: Tecnologías -->
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-code-branch"></i>
+                                </div>
+                                <h3>Tecnologías</h3>
+                                <ul class="feature-list">
+                                    <li><i class="fab fa-google"></i> Google Maps JavaScript API</li>
+                                    <li><i class="fab fa-js"></i> JavaScript</li>
+                                    <li><i class="fab fa-html5"></i> HTML5</li>
+                                    <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sección de Resumen del Funcionamiento para la Calculadora IP -->
+                    <div id="calculadora-ip-summary" class="code-section" style="display: none;">
+                        <h2>Resumen del funcionamiento</h2>
+                        <div class="cards-container">
+                            <!-- Tarjeta 1: Estructura del Proyecto -->
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </div>
+                                <h3>Estructura del Proyecto</h3>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-code"></i> <strong>HTML:</strong> Formulario de entrada y área de resultados</li>
+                                    <li><i class="fab fa-css3-alt"></i> <strong>CSS:</strong> Estilos de la interfaz y diseño responsivo</li>
+                                    <li><i class="fab fa-js"></i> <strong>JavaScript:</strong> Lógica de cálculo y validación</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Tarjeta 2: Características -->
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <h3>Características</h3>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-network-wired"></i> Cálculo de direcciones de red</li>
+                                    <li><i class="fas fa-shield-alt"></i> Validación de direcciones IP</li>
+                                    <li><i class="fas fa-exchange-alt"></i> Conversión entre formatos</li>
+                                    <li><i class="fas fa-mobile-alt"></i> Diseño responsivo</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Tarjeta 3: Tecnologías -->
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-code-branch"></i>
+                                </div>
+                                <h3>Tecnologías</h3>
+                                <ul class="feature-list">
+                                    <li><i class="fab fa-js"></i> JavaScript</li>
+                                    <li><i class="fab fa-html5"></i> HTML5</li>
+                                    <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                                    <li><i class="fas fa-server"></i> Sin dependencias externas</li>
                                 </ul>
                             </div>
                         </div>

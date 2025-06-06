@@ -95,7 +95,7 @@ const proyectos = {
             'Selecciona el prefijo de red o ingresa una máscara de subred',
             'Haz clic en el botón "Calcular"',
             'Revisa los resultados que incluyen dirección de red, broadcast, máscara y más',
-            'Utiliza el botón "Limpiar" para reiniciar el formulario',
+            'Utiliza el botón para reiniciar el formulario',
             'La aplicación validará automáticamente los datos ingresados',
             'Los resultados se mostrarán en formato decimal punteado y binario para mejor comprensión',
             'Puedes copiar los resultados haciendo clic en los botones de copia'
@@ -156,11 +156,10 @@ const proyectos = {
         titulo: 'Google Maps',
         fecha: 'Mayo 2024',
         tecnologias: 'HTML5, CSS3, JavaScript, Google Maps API',
-        descripcion: 'Aplicación web interactiva que utiliza la API de Google Maps para mostrar ubicaciones, rutas y puntos de interés. Desarrollada con JavaScript moderno, incluye funcionalidades como búsqueda de ubicaciones, marcadores personalizados y cálculo de rutas.',
+        descripcion: 'Aplicación web interactiva que utiliza la API de Google Maps para mostrar ubicaciones y puntos de interés. Desarrollada con JavaScript, incluye funcionalidades como búsqueda de ubicaciones y marcadores personalizados.',
         caracteristicas: [
             'Búsqueda de ubicaciones con autocompletado',
             'Marcadores personalizados en el mapa',
-            'Cálculo de rutas y direcciones',
             'Información detallada de ubicaciones',
             'Diseño responsivo y adaptable',
             'Interfaz intuitiva y fácil de usar',
@@ -186,7 +185,6 @@ const proyectos = {
                 'Geolocalización del navegador',
                 'Búsqueda con autocompletado',
                 'Marcadores personalizados',
-                'Cálculo de rutas',
                 'Diseño responsivo',
                 'Manejo de eventos del mapa',
                 'Ventanas de información personalizadas'
@@ -205,7 +203,6 @@ const proyectos = {
             '3. Haz clic en cualquier punto del mapa para agregar un marcador',
             '4. Haz clic en un marcador para ver más información',
             '5. Usa los controles del mapa para hacer zoom y moverte',
-            '6. Para calcular una ruta, haz clic en el botón correspondiente y selecciona origen y destino'
         ]
     }
 };
@@ -342,18 +339,19 @@ function updateProjectContent(proyecto) {
             const stepsList = document.getElementById('google-maps-steps');
             if (section && stepsList) {
                 section.style.display = 'block';
-                stepsList.innerHTML = proyecto.comoUsar.map(paso => `<li>${paso}</li>`).join('');
+                stepsList.innerHTML = proyecto.comoUsar ? proyecto.comoUsar.map(paso => `<li>${paso}</li>`).join('') : '';
             }
         }
     }
 
-    // Manejar la sección de explicación del código
+    // Obtener referencia a la sección de explicación de código
     const codeSection = document.getElementById('code-explanation-section');
-    const codeSummarySection = document.querySelector('.code-section');
     
-    // Ocultar todas las secciones primero
-    if (codeSection) codeSection.style.display = 'none';
-    if (codeSummarySection) codeSummarySection.style.display = 'none';
+    // Ocultar todas las secciones de resumen primero
+    const allSummaries = document.querySelectorAll('.code-section');
+    allSummaries.forEach(summary => {
+        summary.style.display = 'none';
+    });
     
     // Ocultar todos los detalles de código
     const allCodeDetails = document.querySelectorAll('.project-code-details');
@@ -361,29 +359,16 @@ function updateProjectContent(proyecto) {
         detail.style.display = 'none';
     });
     
-    // Mostrar/ocultar secciones según el proyecto
-    if (proyecto.id === 'memorion') {
-        // Para Memorion: mostrar tanto la explicación del código como el resumen
-        if (codeSection) codeSection.style.display = 'block';
-        if (codeSummarySection) codeSummarySection.style.display = 'block';
-        const memorionDetails = document.getElementById('memorion-code-details');
-        if (memorionDetails) memorionDetails.style.display = 'block';
-    } else if (proyecto.id === 'calculadora-ip') {
-        // Para Calculadora IP: mostrar tanto la explicación del código como el resumen
-        if (codeSection) codeSection.style.display = 'block';
-        if (codeSummarySection) codeSummarySection.style.display = 'block';
-        const calculadoraDetails = document.getElementById('calculadora-code-details');
-        if (calculadoraDetails) calculadoraDetails.style.display = 'block';
-    } else if (proyecto.id === 'google-maps') {
-        // Para Google Maps: mostrar tanto la explicación del código como el resumen
-        if (codeSection) codeSection.style.display = 'block';
-        if (codeSummarySection) codeSummarySection.style.display = 'block';
-        const googleMapsDetails = document.getElementById('google-maps-code-details');
-        if (googleMapsDetails) googleMapsDetails.style.display = 'block';
-    } else {
-        // Para otros proyectos: mostrar solo el resumen estándar
-        if (codeSummarySection) codeSummarySection.style.display = 'block';
-    }
+    // Mostrar la sección de explicación de código
+    if (codeSection) codeSection.style.display = 'block';
+    
+    // Mostrar el resumen específico del proyecto
+    const projectSummary = document.getElementById(`${proyecto.id}-summary`);
+    if (projectSummary) projectSummary.style.display = 'block';
+    
+    // Mostrar los detalles de código específicos del proyecto
+    const projectCodeDetails = document.getElementById(`${proyecto.id}-code-details`);
+    if (projectCodeDetails) projectCodeDetails.style.display = 'block';
 }
 
 // Función para cargar los detalles del proyecto
