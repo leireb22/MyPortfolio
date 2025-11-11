@@ -120,7 +120,7 @@ const i18n = {
         
         // Sección de formación
         'Formación Académica': 'Academic Education',
-        'Desarrollo de Aplicaciones Web': 'Web Application Development',
+        'Desarrollo de Aplicaciones Multiplataforma': 'Multiplatform Application Development',
         '2024 - Actualidad (2 años)': '2024 - Present (2 years)',
         'Bachillerato de Artes': 'Arts High School',
         '2020 - 2022 (2 años)': '2020 - 2022 (2 years)',
