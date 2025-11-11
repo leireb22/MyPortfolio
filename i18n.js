@@ -130,7 +130,7 @@ const i18n = {
         // Sección de experiencia
         'Experiencia Laboral': 'Work Experience',
         'Prácticas de Desarrollo de Aplicaciones Web': 'Web Application Development Internship',
-        '2024 - 1º Curso DAW': '2024 - 1st Year DAW',
+        '2024 / 2025 - 1º Curso DAW': '2024 / 2025 - 1st Year DAW',
         'Durante mi primer año de Desarrollo de Aplicaciones Web, he realizado diversos proyectos que demuestran mis habilidades técnicas y creativas. Puedes ver algunos de estos trabajos en la sección de Proyectos de este portafolio, donde he aplicado mis conocimientos en programación, diseño de interfaces y desarrollo web.': 'During my first year of Web Application Development, I have completed various projects that demonstrate my technical and creative skills. You can see some of these works in the Projects section of this portfolio, where I have applied my knowledge in programming, interface design, and web development.',
         'Experiencia en Hostelería': 'Hospitality Experience',
         'Varios periodos': 'Various periods',
