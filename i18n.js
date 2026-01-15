@@ -188,11 +188,87 @@ const i18n = {
         'Tecnologías': 'Technologies',
         'Descripción': 'Description',
         'Características': 'Features',
+        'Características principales': 'Main Features',
         'Ver Demo': 'View Demo',
         'Código Fuente': 'Source Code',
         'Juego de memoria': 'Memory game',
         'Calculadora de IP': 'IP Calculator',
-        'Maps con API': 'Maps with API'
+        'Maps con API': 'Maps with API',
+        'Cómo jugar': 'How to Play',
+        'Cómo usar': 'How to Use',
+        'Explicación del Código': 'Code Explanation',
+        
+        // Memorion
+        'Memorion': 'Memorion',
+        'Juego de memoria de cartas basado en web, con ajustes de juego personalizables, temas y un sistema de clasificación.': 'Web-based memory card game, with customizable game settings, themes and a ranking system.',
+        'Formulario de configuración personalizable': 'Customizable configuration form',
+        'Múltiples modos de juego: Normal y Flash': 'Multiple game modes: Normal and Flash',
+        'Tipos de tablero: Predeterminado (4x4, 5x4, 6x6) y personalizado': 'Board types: Default (4x4, 5x4, 6x6) and custom',
+        'Cinco temas diferentes: Scooby-Doo, Comida, Deportes, Banderas y opción Aleatoria': 'Five different themes: Scooby-Doo, Food, Sports, Flags and Random option',
+        'Temporizador opcional': 'Optional timer',
+        'Sistema de clasificación con almacenamiento local': 'Ranking system with local storage',
+        'Compartir resultados en Facebook': 'Share results on Facebook',
+        'Soporte multidispositivo y diseño responsivo': 'Multi-device support and responsive design',
+        '1. Configura el juego con tus preferencias': '1. Set up the game with your preferences',
+        '2. Haz clic en dos cartas para encontrar coincidencias': '2. Click on two cards to find matches',
+        '3. Encuentra todos los pares para ganar': '3. Find all pairs to win',
+        '4. Revisa tu posición en el ranking': '4. Check your position in the ranking',
+        '5. ¡Comparte tus resultados en redes sociales!': '5. Share your results on social networks!',
+        'Abril 2025': 'April 2025',
+        'HTML5, CSS3, JavaScript, LocalStorage': 'HTML5, CSS3, JavaScript, LocalStorage',
+        
+        // Calculadora IP
+        'Calculadora IP': 'IP Calculator',
+        'Calculadora de subredes IP que permite a los usuarios calcular información de red como direcciones de red, direcciones de broadcast, máscara de subred y más.': 'IP subnet calculator that allows users to calculate network information such as network addresses, broadcast addresses, subnet mask and more.',
+        'Cálculo de direcciones de red y broadcast': 'Calculation of network and broadcast addresses',
+        'Determinación de la máscara de subred': 'Subnet mask determination',
+        'Cálculo del número de hosts disponibles': 'Calculation of available hosts',
+        'Visualización del rango de direcciones IP': 'Display of IP address range',
+        'Interfaz intuitiva y fácil de usar': 'Intuitive and easy-to-use interface',
+        'Diseño responsivo que funciona en diferentes dispositivos': 'Responsive design that works on different devices',
+        'Validación de entrada para direcciones IP y prefijos de red': 'Input validation for IP addresses and network prefixes',
+        'Resultados claros y fáciles de entender': 'Clear and easy to understand results',
+        'Ingresa una dirección IP en el campo correspondiente': 'Enter an IP address in the corresponding field',
+        'Selecciona el prefijo de red o ingresa una máscara de subred': 'Select the network prefix or enter a subnet mask',
+        'Haz clic en el botón "Calcular"': 'Click the "Calculate" button',
+        'Revisa los resultados que incluyen dirección de red, broadcast, máscara y más': 'Review the results which include network address, broadcast, mask and more',
+        'Utiliza el botón para reiniciar el formulario': 'Use the button to reset the form',
+        'La aplicación validará automáticamente los datos ingresados': 'The application will automatically validate the entered data',
+        'Los resultados se mostrarán en formato decimal punteado y binario para mejor comprensión': 'Results will be displayed in dotted decimal and binary format for better understanding',
+        'Puedes copiar los resultados haciendo clic en los botones de copia': 'You can copy the results by clicking the copy buttons',
+        'Marzo 2025': 'March 2025',
+        'HTML, CSS, JavaScript': 'HTML, CSS, JavaScript',
+        
+        // Google Maps
+        'Google Maps API': 'Google Maps API',
+        'Aplicación web que muestra un mapa interactivo utilizando la API de Google Maps, permitiendo visualizar ubicaciones específicas y ofreciendo funcionalidades de interacción.': 'Web application that displays an interactive map using the Google Maps API, allowing you to view specific locations and offering interaction features.',
+        'Visualización de mapas interactivos': 'Interactive map display',
+        'Centrado en ubicaciones específicas': 'Centered on specific locations',
+        'Controles de zoom y navegación': 'Zoom and navigation controls',
+        'Posibilidad de añadir marcadores personalizados': 'Ability to add custom markers',
+        'Interfaz limpia y fácil de usar': 'Clean and easy-to-use interface',
+        'Personalización de estilos de mapa': 'Map style customization',
+        'Integración con servicios de geolocalización': 'Integration with geolocation services',
+        'Búsqueda de ubicaciones con autocompletado': 'Location search with autocomplete',
+        'Marcadores personalizados en el mapa': 'Custom markers on the map',
+        'Información detallada de ubicaciones': 'Detailed location information',
+        'Geolocalización del usuario': 'User geolocation',
+        'Abre la aplicación en tu navegador web': 'Open the application in your web browser',
+        'El mapa se cargará mostrando la ubicación predeterminada': 'The map will load showing the default location',
+        'Usa los controles de zoom para acercar o alejar la vista': 'Use the zoom controls to zoom in or out',
+        'Haz clic y arrastra para moverte por el mapa': 'Click and drag to move around the map',
+        'Los marcadores indican puntos de interés específicos': 'Markers indicate specific points of interest',
+        'Haz clic en un marcador para ver más información': 'Click on a marker to see more information',
+        'Utiliza la barra de búsqueda (si está disponible) para buscar ubicaciones': 'Use the search bar (if available) to search for locations',
+        'La aplicación es completamente responsiva y se adapta a diferentes tamaños de pantalla': 'The application is fully responsive and adapts to different screen sizes',
+        '1. Abre la aplicación en tu navegador': '1. Open the application in your browser',
+        '2. Usa la barra de búsqueda para encontrar una ubicación': '2. Use the search bar to find a location',
+        '3. Haz clic en cualquier punto del mapa para agregar un marcador': '3. Click anywhere on the map to add a marker',
+        '4. Haz clic en un marcador para ver más información': '4. Click on a marker to see more information',
+        '5. Usa los controles del mapa para hacer zoom y moverte': '5. Use the map controls to zoom and move',
+        'Mayo 2025': 'May 2025',
+        'Mayo 2024': 'May 2024',
+        'HTML5, CSS3, JavaScript, Google Maps API': 'HTML5, CSS3, JavaScript, Google Maps API'
     }
 };
 
@@ -212,6 +288,11 @@ function changeLanguage(lang) {
     
     // Actualizar los textos de la página
     updateTexts();
+    
+    // Actualizar el contenido dinámico si estamos en la página de detalles del proyecto
+    if (typeof updateProjectDynamicContent === 'function') {
+        updateProjectDynamicContent();
+    }
     
     // Actualizar todos los botones de cambio de idioma
     const langButtons = document.querySelectorAll('.language-toggle, .lang-toggle');

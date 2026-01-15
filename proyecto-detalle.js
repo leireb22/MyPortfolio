@@ -243,6 +243,61 @@ function createFeatureItem(text) {
     return li;
 }
 
+// Función para actualizar el contenido dinámico cuando se cambia el idioma
+function updateProjectDynamicContent() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id');
+    
+    if (projectId && typeof proyectos !== 'undefined' && proyectos[projectId]) {
+        const proyecto = proyectos[projectId];
+        
+        // Actualizar descripción
+        const projectDescription = document.getElementById('project-description');
+        if (projectDescription) {
+            const traducida = translateText(proyecto.descripcion);
+            projectDescription.textContent = traducida;
+        }
+        
+        // Actualizar características
+        const featuresList = document.getElementById('features-list');
+        if (featuresList) {
+            featuresList.innerHTML = proyecto.caracteristicas
+                .map(caracteristica => {
+                    const traducida = translateText(caracteristica);
+                    return `<li>${traducida}</li>`;
+                })
+                .join('');
+        }
+        
+        // Actualizar pasos de juego/uso
+        if (proyecto.id === 'memorion' && proyecto.comoJugar) {
+            const stepsList = document.getElementById('memorion-steps');
+            if (stepsList) {
+                stepsList.innerHTML = proyecto.comoJugar.map(paso => {
+                    const traducido = translateText(paso);
+                    return `<li>${traducido}</li>`;
+                }).join('');
+            }
+        } else if (proyecto.id === 'calculadora-ip' && proyecto.comoUsar) {
+            const stepsList = document.getElementById('calculadora-steps');
+            if (stepsList) {
+                stepsList.innerHTML = proyecto.comoUsar.map(paso => {
+                    const traducido = translateText(paso);
+                    return `<li>${traducido}</li>`;
+                }).join('');
+            }
+        } else if (proyecto.id === 'google-maps' && proyecto.comoUsar) {
+            const stepsList = document.getElementById('google-maps-steps');
+            if (stepsList) {
+                stepsList.innerHTML = proyecto.comoUsar.map(paso => {
+                    const traducido = translateText(paso);
+                    return `<li>${traducido}</li>`;
+                }).join('');
+            }
+        }
+    }
+}
+
 // Función para crear una sección con título y contenido
 function createSection(title, content, isList = false) {
     const section = document.createElement('div');
@@ -301,13 +356,22 @@ function createSection(title, content, isList = false) {
 // Función para actualizar el contenido del proyecto
 function updateProjectContent(proyecto) {
     // Actualizar descripción
-    document.getElementById('project-description').textContent = proyecto.descripcion;
+    const projectDescription = document.getElementById('project-description');
+    projectDescription.textContent = proyecto.descripcion;
+    
+    // Traducir descripción si está disponible
+    if (currentLanguage === 'en' && translateText(proyecto.descripcion) !== proyecto.descripcion) {
+        projectDescription.textContent = translateText(proyecto.descripcion);
+    }
     
     // Actualizar características
     const featuresList = document.getElementById('features-list');
     if (featuresList) {
         featuresList.innerHTML = proyecto.caracteristicas
-            .map(caracteristica => `<li>${caracteristica}</li>`)
+            .map(caracteristica => {
+                const traducida = translateText(caracteristica);
+                return `<li>${traducida}</li>`;
+            })
             .join('');
     }
 
@@ -325,21 +389,30 @@ function updateProjectContent(proyecto) {
             const stepsList = document.getElementById('memorion-steps');
             if (section && stepsList) {
                 section.style.display = 'block';
-                stepsList.innerHTML = proyecto.comoJugar.map(paso => `<li>${paso}</li>`).join('');
+                stepsList.innerHTML = proyecto.comoJugar.map(paso => {
+                    const traducido = translateText(paso);
+                    return `<li>${traducido}</li>`;
+                }).join('');
             }
         } else if (proyecto.id === 'calculadora-ip' && proyecto.comoUsar) {
             const section = document.getElementById('calculadora-gameplay');
             const stepsList = document.getElementById('calculadora-steps');
             if (section && stepsList) {
                 section.style.display = 'block';
-                stepsList.innerHTML = proyecto.comoUsar.map(paso => `<li>${paso}</li>`).join('');
+                stepsList.innerHTML = proyecto.comoUsar.map(paso => {
+                    const traducido = translateText(paso);
+                    return `<li>${traducido}</li>`;
+                }).join('');
             }
         } else if (proyecto.id === 'google-maps' && proyecto.comoUsar) {
             const section = document.getElementById('google-maps-gameplay');
             const stepsList = document.getElementById('google-maps-steps');
             if (section && stepsList) {
                 section.style.display = 'block';
-                stepsList.innerHTML = proyecto.comoUsar ? proyecto.comoUsar.map(paso => `<li>${paso}</li>`).join('') : '';
+                stepsList.innerHTML = proyecto.comoUsar ? proyecto.comoUsar.map(paso => {
+                    const traducido = translateText(paso);
+                    return `<li>${traducido}</li>`;
+                }).join('') : '';
             }
         }
     }
@@ -435,6 +508,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Actualizar el contenido del proyecto
         updateProjectContent(proyecto);
+        
+        // Actualizar los textos con traducción
+        updateTexts();
     } else {
         // Redirigir a la página de proyectos si no se encuentra el proyecto
         window.location.href = 'proyectos.html';
