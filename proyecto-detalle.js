@@ -250,6 +250,22 @@ function updateProjectDynamicContent() {
     
     if (projectId && typeof proyectos !== 'undefined' && proyectos[projectId]) {
         const proyecto = proyectos[projectId];
+
+        // Actualizar título, fecha y tecnologías
+        const projectTitle = document.getElementById('project-title');
+        if (projectTitle) {
+            projectTitle.textContent = translateText(proyecto.titulo);
+        }
+
+        const projectDate = document.getElementById('project-date');
+        if (projectDate) {
+            projectDate.textContent = translateText(proyecto.fecha);
+        }
+
+        const projectTech = document.getElementById('project-tech');
+        if (projectTech) {
+            projectTech.textContent = translateText(proyecto.tecnologias);
+        }
         
         // Actualizar descripción
         const projectDescription = document.getElementById('project-description');
@@ -296,56 +312,125 @@ function updateProjectDynamicContent() {
             }
         }
         
-        // Traducir elementos de lista en las secciones de código
-        document.querySelectorAll('.project-code-details li, .code-section li').forEach(li => {
-            const originalText = li.textContent;
-            const traducida = translateText(originalText);
+        // Traducir elementos de lista (y permitir volver a ES) guardando la clave original
+        document.querySelectorAll('.project-code-details li, .code-section li, .tech-list li').forEach(li => {
+            const currentText = (li.textContent || '').trim();
+
+            // Guardar/recuperar la clave estable para traducir siempre desde el texto original
+            let i18nKey = li.dataset.i18nKey;
+            if (!i18nKey) {
+                i18nKey = currentText;
+
+                // Si el texto actual está ya traducido (ej: en inglés) intentamos recuperar la clave ES
+                // buscando en el diccionario del otro idioma.
+                try {
+                    const otherLang = currentLanguage === 'es' ? 'en' : 'es';
+                    if (typeof i18n !== 'undefined' && i18n && i18n[otherLang]) {
+                        for (const [k, v] of Object.entries(i18n[otherLang])) {
+                            if (v === currentText) {
+                                i18nKey = k;
+                                break;
+                            }
+                        }
+                    }
+                } catch (e) {
+                    // noop
+                }
+
+                li.dataset.i18nKey = i18nKey;
+            }
+
+            const traducidaCompleta = translateText(i18nKey);
+
             // Preservar los iconos si existen
             const icon = li.querySelector('i');
             const strong = li.querySelector('strong');
             const code = li.querySelector('code');
-            
-            if (icon || strong || code) {
-                // Si tiene elementos internos, reconstruir el contenido preservando HTML
-                let newHTML = '';
-                if (icon) newHTML += `<i class="${icon.className}"></i> `;
-                if (strong) {
-                    const strongText = strong.textContent;
-                    const strongTranslated = translateText(strongText);
-                    newHTML += `<strong>${strongTranslated}:</strong> `;
-                    // Buscar el texto después del strong
-                    const afterStrong = originalText.substring(originalText.indexOf(':') + 1).trim();
-                    const afterTranslated = translateText(afterStrong);
-                    newHTML += afterTranslated;
-                } else if (code) {
-                    const codeText = code.textContent;
-                    newHTML += `<code>${codeText}</code>`;
-                    const afterCode = originalText.substring(originalText.indexOf(codeText) + codeText.length).trim();
-                    if (afterCode) {
-                        const afterTranslated = translateText(afterCode);
-                        newHTML += ' ' + afterTranslated;
-                    }
-                } else {
-                    newHTML += traducida;
-                }
-                li.innerHTML = newHTML;
-            } else {
-                li.textContent = traducida;
+
+            // Si no hay estructura interna, actualizar como texto plano
+            if (!icon && !strong && !code) {
+                li.textContent = traducidaCompleta;
+                return;
             }
+
+            // Si tiene elementos internos, reconstruir el contenido preservando HTML
+            let newHTML = '';
+            if (icon) newHTML += `<i class="${icon.className}"></i> `;
+
+            if (strong) {
+                // La clave de traducción normalmente incluye TODO el texto (ej: "HTML: ...")
+                // Si traducimos por partes se pierden traducciones y se acumulan ':'
+                const parts = traducidaCompleta.split(':');
+                const label = (parts[0] || '').trim();
+                const rest = parts.slice(1).join(':').trim();
+
+                newHTML += `<strong>${label}:</strong>`;
+                if (rest) newHTML += ` ${rest}`;
+            } else if (code) {
+                const codeText = code.textContent;
+                newHTML += `<code>${codeText}</code>`;
+                const afterCode = originalText.substring(originalText.indexOf(codeText) + codeText.length).trim();
+                if (afterCode) {
+                    const afterTranslated = translateText(afterCode);
+                    newHTML += ' ' + afterTranslated;
+                }
+            } else {
+                newHTML += traducidaCompleta;
+            }
+
+            li.innerHTML = newHTML;
         });
         
         // Traducir títulos h3 en las tarjetas
         document.querySelectorAll('.feature-card h3').forEach(h3 => {
-            const text = h3.textContent;
-            const traducida = translateText(text);
-            h3.textContent = traducida;
+            const currentText = (h3.textContent || '').trim();
+
+            let i18nKey = h3.dataset.i18nKey;
+            if (!i18nKey) {
+                i18nKey = currentText;
+                try {
+                    const otherLang = currentLanguage === 'es' ? 'en' : 'es';
+                    if (typeof i18n !== 'undefined' && i18n && i18n[otherLang]) {
+                        for (const [k, v] of Object.entries(i18n[otherLang])) {
+                            if (v === currentText) {
+                                i18nKey = k;
+                                break;
+                            }
+                        }
+                    }
+                } catch (e) {
+                    // noop
+                }
+                h3.dataset.i18nKey = i18nKey;
+            }
+
+            h3.textContent = translateText(i18nKey);
         });
         
         // Traducir párrafos en las descripciones técnicas
         document.querySelectorAll('.tech-description p').forEach(p => {
-            const text = p.textContent;
-            const traducida = translateText(text);
-            p.textContent = traducida;
+            const currentText = (p.textContent || '').trim();
+
+            let i18nKey = p.dataset.i18nKey;
+            if (!i18nKey) {
+                i18nKey = currentText;
+                try {
+                    const otherLang = currentLanguage === 'es' ? 'en' : 'es';
+                    if (typeof i18n !== 'undefined' && i18n && i18n[otherLang]) {
+                        for (const [k, v] of Object.entries(i18n[otherLang])) {
+                            if (v === currentText) {
+                                i18nKey = k;
+                                break;
+                            }
+                        }
+                    }
+                } catch (e) {
+                    // noop
+                }
+                p.dataset.i18nKey = i18nKey;
+            }
+
+            p.textContent = translateText(i18nKey);
         });
     }
 }

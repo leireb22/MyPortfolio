@@ -294,6 +294,9 @@ const i18n = {
         'HTML: Estructura la página y los elementos del juego (tablero, cartas, contadores).': 'HTML: Structures the page and game elements (board, cards, counters).',
         'CSS: Define el estilo visual del juego (diseño, colores, animaciones).': 'CSS: Defines the visual style of the game (design, colors, animations).',
         'JavaScript: Implementa la lógica del juego (creación del tablero, volteo de cartas, comparación, control del tiempo y movimientos, detección de victoria).': 'JavaScript: Implements the game logic (board creation, card flipping, comparison, time and move control, victory detection).',
+        'HTML: Estructura del tablero y controles': 'HTML: Board structure and controls',
+        'CSS: Estilos visuales y animaciones': 'CSS: Visual styles and animations',
+        'JavaScript: Lógica del juego y manejo de eventos': 'JavaScript: Game logic and event handling',
         'Generación dinámica del tablero de juego.': 'Dynamic generation of the game board.',
         'Manejo de eventos de clic para voltear las cartas.': 'Click event handling to flip cards.',
         'Lógica para comparar las cartas y determinar si coinciden.': 'Logic to compare cards and determine if they match.',
@@ -306,6 +309,7 @@ const i18n = {
         'Configuración personalizable': 'Customizable configuration',
         'Diferentes niveles de dificultad': 'Different difficulty levels',
         'Sistema de puntuación': 'Scoring system',
+        'Diseño responsivo': 'Responsive design',
         'Cálculo de direcciones de red': 'Network address calculation',
         'Validación de direcciones IP': 'IP address validation',
         'Conversión entre formatos': 'Format conversion',
@@ -362,13 +366,6 @@ function changeLanguage(lang) {
         updateProjectDynamicContent();
     }
     
-    // Actualizar todos los botones de cambio de idioma
-    const langButtons = document.querySelectorAll('.language-toggle, .lang-toggle');
-    langButtons.forEach(button => {
-        button.textContent = currentLanguage === 'es' ? 'EN' : 'ES';
-        button.setAttribute('title', currentLanguage === 'es' ? 'Cambiar a inglés' : 'Switch to Spanish');
-    });
-    
     // Guardar la preferencia de idioma en localStorage
     localStorage.setItem('preferredLanguage', currentLanguage);
 }
@@ -413,10 +410,6 @@ function initLanguageButtons() {
     const langButtons = document.querySelectorAll('.language-toggle, .lang-toggle');
     
     langButtons.forEach(button => {
-        // Actualizar el texto del botón
-        button.textContent = currentLanguage === 'es' ? 'EN' : 'ES';
-        button.setAttribute('title', currentLanguage === 'es' ? 'Cambiar a inglés' : 'Switch to Spanish');
-        
         // Remover cualquier manejador de eventos anterior
         const newButton = button.cloneNode(true);
         button.parentNode.replaceChild(newButton, button);

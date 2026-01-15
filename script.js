@@ -57,16 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Actualizar textos después de cargar la página
     updateTexts();
     
-    // Configurar el evento de clic para los enlaces de idioma
-    document.querySelectorAll('.lang-es, .lang-en').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation(); // Prevenir que el evento se propague al contenedor
-            const lang = this.classList.contains('lang-es') ? 'es' : 'en';
-            changeLanguage(lang);
-        });
-    });
-    
     // Efecto de fade in
     document.body.style.opacity = '0';
     setTimeout(() => {
