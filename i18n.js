@@ -268,7 +268,75 @@ const i18n = {
         '5. Usa los controles del mapa para hacer zoom y moverte': '5. Use the map controls to zoom and move',
         'Mayo 2025': 'May 2025',
         'Mayo 2024': 'May 2024',
-        'HTML5, CSS3, JavaScript, Google Maps API': 'HTML5, CSS3, JavaScript, Google Maps API'
+        'HTML5, CSS3, JavaScript, Google Maps API': 'HTML5, CSS3, JavaScript, Google Maps API',
+        
+        // Secciones de Explicación del Código
+        'Tecnologías utilizadas': 'Technologies Used',
+        'Características clave': 'Key Features',
+        'Funcionalidades clave': 'Key Functionalities',
+        'Estructura del Proyecto': 'Project Structure',
+        'Función Principal': 'Main Function',
+        'Detalles técnicos': 'Technical Details',
+        'Resumen del funcionamiento': 'Operation Summary',
+        'Ver Demo': 'View Demo',
+        'Ver Código': 'View Code',
+        'Ver en GitHub': 'View on GitHub',
+        
+        // Tecnologías para Calculadora IP
+        'HTML: Estructura de la interfaz de la calculadora.': 'HTML: Structure of the calculator interface.',
+        'CSS: Estilos visuales y diseño responsivo.': 'CSS: Visual styles and responsive design.',
+        'JavaScript: Lógica de la calculadora y manejo de eventos.': 'JavaScript: Calculator logic and event handling.',
+        'Interfaz intuitiva y fácil de usar': 'Intuitive and easy-to-use interface',
+        'Soporte para operaciones matemáticas básicas': 'Support for basic mathematical operations',
+        'Código limpio y bien organizado': 'Clean and well-organized code',
+        
+        // Tecnologías para Memorion
+        'HTML: Estructura la página y los elementos del juego (tablero, cartas, contadores).': 'HTML: Structures the page and game elements (board, cards, counters).',
+        'CSS: Define el estilo visual del juego (diseño, colores, animaciones).': 'CSS: Defines the visual style of the game (design, colors, animations).',
+        'JavaScript: Implementa la lógica del juego (creación del tablero, volteo de cartas, comparación, control del tiempo y movimientos, detección de victoria).': 'JavaScript: Implements the game logic (board creation, card flipping, comparison, time and move control, victory detection).',
+        'Generación dinámica del tablero de juego.': 'Dynamic generation of the game board.',
+        'Manejo de eventos de clic para voltear las cartas.': 'Click event handling to flip cards.',
+        'Lógica para comparar las cartas y determinar si coinciden.': 'Logic to compare cards and determine if they match.',
+        'Contador de movimientos y temporizador.': 'Move counter and timer.',
+        'Detección de la condición de victoria.': 'Detection of the victory condition.',
+        
+        // Características de las tarjetas
+        'Características': 'Features',
+        'Tecnologías': 'Technologies',
+        'Configuración personalizable': 'Customizable configuration',
+        'Diferentes niveles de dificultad': 'Different difficulty levels',
+        'Sistema de puntuación': 'Scoring system',
+        'Cálculo de direcciones de red': 'Network address calculation',
+        'Validación de direcciones IP': 'IP address validation',
+        'Conversión entre formatos': 'Format conversion',
+        'Búsqueda de ubicaciones': 'Location search',
+        'Marcadores personalizados': 'Custom markers',
+        'Ventanas de información': 'Information windows',
+        
+        // Tecnologías en las tarjetas
+        'Google Maps JavaScript API': 'Google Maps JavaScript API',
+        'Sin dependencias externas': 'No external dependencies',
+        
+        // Descripciones técnicas para Google Maps
+        'index.html: Contiene la estructura básica de la página web y la referencia a la API de Google Maps.': 'index.html: Contains the basic structure of the web page and the reference to the Google Maps API.',
+        'style.css: Define el estilo visual del mapa y la página web.': 'style.css: Defines the visual style of the map and web page.',
+        'script.js: Contiene la lógica para inicializar y configurar el mapa.': 'script.js: Contains the logic to initialize and configure the map.',
+        'initMap(): Función que se encarga de crear y configurar el mapa.': 'initMap(): Function responsible for creating and configuring the map.',
+        'Crea un nuevo objeto google.maps.Map asociado al elemento HTML.': 'Creates a new google.maps.Map object associated with the HTML element.',
+        'Configura las opciones del mapa.': 'Configures the map options.',
+        'Puede añadir marcadores personalizados.': 'Can add custom markers.',
+        'Maneja eventos de interacción del usuario.': 'Handles user interaction events.',
+        
+        // Descripciones técnicas para Calculadora IP
+        'HTML: Formulario de entrada y área de resultados': 'HTML: Input form and results area',
+        'CSS: Estilos de la interfaz y diseño responsivo': 'CSS: Interface styles and responsive design',
+        'JavaScript: Lógica de cálculo y validación': 'JavaScript: Calculation and validation logic',
+        'HTML: Contenedor del mapa y controles de interfaz': 'HTML: Map container and interface controls',
+        'CSS: Estilos del mapa y elementos interactivos': 'CSS: Map styles and interactive elements',
+        'JavaScript: Lógica de interacción con la API de Google Maps': 'JavaScript: Logic for interacting with the Google Maps API',
+        
+        // Párrafos con código
+        'initMap(): Función que se encarga de crear y configurar el mapa.': 'initMap(): Function responsible for creating and configuring the map.'
     }
 };
 

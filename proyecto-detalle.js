@@ -295,6 +295,58 @@ function updateProjectDynamicContent() {
                 }).join('');
             }
         }
+        
+        // Traducir elementos de lista en las secciones de código
+        document.querySelectorAll('.project-code-details li, .code-section li').forEach(li => {
+            const originalText = li.textContent;
+            const traducida = translateText(originalText);
+            // Preservar los iconos si existen
+            const icon = li.querySelector('i');
+            const strong = li.querySelector('strong');
+            const code = li.querySelector('code');
+            
+            if (icon || strong || code) {
+                // Si tiene elementos internos, reconstruir el contenido preservando HTML
+                let newHTML = '';
+                if (icon) newHTML += `<i class="${icon.className}"></i> `;
+                if (strong) {
+                    const strongText = strong.textContent;
+                    const strongTranslated = translateText(strongText);
+                    newHTML += `<strong>${strongTranslated}:</strong> `;
+                    // Buscar el texto después del strong
+                    const afterStrong = originalText.substring(originalText.indexOf(':') + 1).trim();
+                    const afterTranslated = translateText(afterStrong);
+                    newHTML += afterTranslated;
+                } else if (code) {
+                    const codeText = code.textContent;
+                    newHTML += `<code>${codeText}</code>`;
+                    const afterCode = originalText.substring(originalText.indexOf(codeText) + codeText.length).trim();
+                    if (afterCode) {
+                        const afterTranslated = translateText(afterCode);
+                        newHTML += ' ' + afterTranslated;
+                    }
+                } else {
+                    newHTML += traducida;
+                }
+                li.innerHTML = newHTML;
+            } else {
+                li.textContent = traducida;
+            }
+        });
+        
+        // Traducir títulos h3 en las tarjetas
+        document.querySelectorAll('.feature-card h3').forEach(h3 => {
+            const text = h3.textContent;
+            const traducida = translateText(text);
+            h3.textContent = traducida;
+        });
+        
+        // Traducir párrafos en las descripciones técnicas
+        document.querySelectorAll('.tech-description p').forEach(p => {
+            const text = p.textContent;
+            const traducida = translateText(text);
+            p.textContent = traducida;
+        });
     }
 }
 
@@ -511,6 +563,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Actualizar los textos con traducción
         updateTexts();
+        
+        // Actualizar el contenido dinámico para traducir listas y descripciones
+        updateProjectDynamicContent();
     } else {
         // Redirigir a la página de proyectos si no se encuentra el proyecto
         window.location.href = 'proyectos.html';
