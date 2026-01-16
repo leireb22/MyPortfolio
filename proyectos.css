@@ -102,6 +102,23 @@ body {
     opacity: 0.9;
 }
 
+/* Iconos en las tarjetas de proyectos */
+.project-card .action-button i {
+    transition: color 0.3s ease, filter 0.3s ease;
+}
+
+.project-card:hover .action-button i {
+    color: white !important;
+    filter: brightness(0) invert(1);
+}
+
+/* Asegurar que los iconos blancos se vean en hover */
+.project-card:hover .action-button.primary i,
+.project-card:hover .action-button.secondary i {
+    color: white !important;
+    filter: brightness(0) invert(1);
+}
+
 /* Contenido de la tarjeta */
 .project-content {
     padding: 0.5rem 1.25rem 0.5rem;

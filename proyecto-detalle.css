@@ -191,6 +191,8 @@
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     height: 100%;
 }
 
@@ -201,18 +203,25 @@
 }
 
 .card-icon {
-    width: 36px;
-    height: 36px;
-    background: #fff9f9;  /* Rosa muy claro */
-    border: 1.5px solid var(--primary-color);
+    width: 48px;
+    height: 48px;
+    background: #fff9f9;
+    border: 2px solid var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
     color: var(--primary-color);
-    font-size: 1rem;
-    box-shadow: 0 1px 4px rgba(244, 194, 194, 0.2);
+    font-size: 1.2rem;
+    box-shadow: 0 2px 6px rgba(244, 194, 194, 0.15);
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-icon:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .feature-card h3 {
@@ -252,6 +261,12 @@
     justify-content: center;
     margin-top: 0.15em;
     border: 1px solid rgba(244, 194, 194, 0.5);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.feature-list li:hover i, .feature-card:hover .feature-list li:hover i, .feature-card .feature-list li:hover i {
+    background-color: var(--primary-color) !important;
+    color: white !important;
 }
 
 .file-list li {
@@ -587,6 +602,8 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     height: 100%;
     box-sizing: border-box;
     border: 1px solid #f0f0f0;
@@ -596,14 +613,6 @@
     font-size: 1.4rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 182, 193, 0.1);
-    border-radius: 50%;
-    border: 2px solid var(--primary-color);
 }
 
 .feature-card h3 {
@@ -1439,6 +1448,9 @@ explanation-text h3::after {
     background: var(--card-bg);
     border-radius: var(--border-radius);
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     transition: var(--transition);
     box-shadow: var(--shadow-sm);
@@ -1451,10 +1463,9 @@ explanation-text h3::after {
 }
 
 .feature-card i {
-    font-size: 2.5rem;
+    font-size: 1.4rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
-    display: block;
 }
 
 .feature-card h3 {

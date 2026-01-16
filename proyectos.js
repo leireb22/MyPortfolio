@@ -204,4 +204,50 @@ function initProyectos() {
 }
 
 // Inicializar cuando el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', initProyectos);
+document.addEventListener('DOMContentLoaded', function() {
+    initProyectos();
+    
+    // Forzar cierre del menú lateral al hacer click fuera (solo en esta página)
+    const navToggle = document.getElementById('nav-toggle');
+    if (navToggle) {
+        document.addEventListener('click', function (e) {
+            if (navToggle.checked) {
+                const target = e.target;
+                const isHamburger = target.closest('.nav-toggle-button');
+                const isLanguage = target.closest('.language-container');
+                const isNav = target.closest('.header-nav');
+                if (!isHamburger && !isLanguage && !isNav) {
+                    // Forzar clic en el label del overlay para que el checkbox se desmarque
+                    const overlayLabel = document.querySelector('.nav-overlay');
+                    if (overlayLabel) {
+                        overlayLabel.click();
+                    } else {
+                        // Fallback: desmarcar directamente
+                        navToggle.checked = false;
+                    }
+                }
+            }
+        }, true);
+        document.addEventListener('touchstart', function (e) {
+            if (navToggle.checked) {
+                const target = e.target;
+                const isHamburger = target.closest('.nav-toggle-button');
+                const isLanguage = target.closest('.language-container');
+                const isNav = target.closest('.header-nav');
+                if (!isHamburger && !isLanguage && !isNav) {
+                    const overlayLabel = document.querySelector('.nav-overlay');
+                    if (overlayLabel) {
+                        overlayLabel.click();
+                    } else {
+                        navToggle.checked = false;
+                    }
+                }
+            }
+        }, { passive: true, capture: true });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navToggle.checked) {
+                navToggle.checked = false;
+            }
+        });
+    }
+});

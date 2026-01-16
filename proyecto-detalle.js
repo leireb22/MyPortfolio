@@ -274,15 +274,93 @@ function updateProjectDynamicContent() {
             projectDescription.textContent = traducida;
         }
         
-        // Actualizar características
-        const featuresList = document.getElementById('features-list');
-        if (featuresList) {
-            featuresList.innerHTML = proyecto.caracteristicas
-                .map(caracteristica => {
-                    const traducida = translateText(caracteristica);
-                    return `<li>${traducida}</li>`;
+        // Actualizar estructura del proyecto
+        console.log('Actualizando estructura del proyecto...');
+        const structureList = document.getElementById('structure-list');
+        console.log('structureList encontrado:', !!structureList);
+        console.log('proyecto.detallesTecnicos:', proyecto.detallesTecnicos);
+        if (structureList && proyecto.detallesTecnicos && proyecto.detallesTecnicos.estructura) {
+            console.log('Actualizando estructura con:', proyecto.detallesTecnicos.estructura);
+            structureList.innerHTML = proyecto.detallesTecnicos.estructura
+                .map(item => {
+                    const traducida = translateText(item);
+                    return `<li><i class="fas fa-code"></i> ${traducida}</li>`;
                 })
                 .join('');
+        }
+        
+        // Actualizar características específicas
+        console.log('Actualizando características...');
+        const featuresList = document.getElementById('features-list');
+        console.log('featuresList encontrado:', !!featuresList);
+        console.log('proyecto.caracteristicas:', proyecto.caracteristicas);
+        if (featuresList && proyecto.caracteristicas) {
+            console.log('Actualizando características con:', proyecto.caracteristicas);
+            featuresList.innerHTML = proyecto.caracteristicas
+                .map(item => {
+                    const traducida = translateText(item);
+                    return `<li><i class="fas fa-cog"></i> ${traducida}</li>`;
+                })
+                .join('');
+        }
+        
+        // Actualizar tecnologías específicas
+        console.log('Actualizando tecnologías...');
+        const techList = document.getElementById('tech-list');
+        console.log('techList encontrado:', !!techList);
+        console.log('proyecto.tecnologias:', proyecto.tecnologias);
+        if (techList && proyecto.tecnologias) {
+            const techItems = proyecto.tecnologias.split(',').map(tech => tech.trim());
+            console.log('Tech items:', techItems);
+            techList.innerHTML = techItems
+                .map(item => {
+                    const traducida = translateText(item);
+                    return `<li><i class="fab fa-js"></i> ${traducida}</li>`;
+                })
+                .join('');
+        }
+        
+        // Actualizar elementos específicos de Google Maps
+        if (proyecto.id === 'google-maps') {
+            // Actualizar la descripción de initMap
+            const initMapElement = document.getElementById('google-maps-initmap');
+            if (initMapElement) {
+                const initMapText = translateText('initMap(): Función que se encarga de crear y configurar el mapa.');
+                initMapElement.innerHTML = `<strong>initMap():</strong> ${translateText('Función que se encarga de crear y configurar el mapa.')}`;
+            }
+            
+            // Actualizar la lista de estructura de Google Maps
+            const googleMapsStructure = document.getElementById('google-maps-structure');
+            if (googleMapsStructure) {
+                const structureItems = [
+                    'index.html: Contiene la estructura básica de la página web y la referencia a la API de Google Maps.',
+                    'style.css: Define el estilo visual del mapa y la página web.',
+                    'script.js: Contiene la lógica para inicializar y configurar el mapa.'
+                ];
+                googleMapsStructure.innerHTML = structureItems
+                    .map(item => {
+                        const traducida = translateText(item);
+                        return `<li>${traducida}</li>`;
+                    })
+                    .join('');
+            }
+            
+            // Actualizar la lista de funciones de initMap
+            const googleMapsFunctionList = document.getElementById('google-maps-function-list');
+            if (googleMapsFunctionList) {
+                const functionItems = [
+                    'Crea un nuevo objeto google.maps.Map asociado al elemento HTML.',
+                    'Configura las opciones del mapa.',
+                    'Puede añadir marcadores personalizados.',
+                    'Maneja eventos de interacción del usuario.'
+                ];
+                googleMapsFunctionList.innerHTML = functionItems
+                    .map(item => {
+                        const traducida = translateText(item);
+                        return `<li>${traducida}</li>`;
+                    })
+                    .join('');
+            }
         }
         
         // Actualizar pasos de juego/uso
@@ -658,4 +736,48 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Añadir clase al body para estilos específicos
     document.body.classList.add('project-detail-page');
+    
+    // Forzar cierre del menú lateral al hacer click fuera (solo en esta página)
+    const navToggle = document.getElementById('nav-toggle');
+    if (navToggle) {
+        document.addEventListener('click', function (e) {
+            if (navToggle.checked) {
+                const target = e.target;
+                const isHamburger = target.closest('.nav-toggle-button');
+                const isLanguage = target.closest('.language-container');
+                const isNav = target.closest('.header-nav');
+                if (!isHamburger && !isLanguage && !isNav) {
+                    // Forzar clic en el label del overlay para que el checkbox se desmarque
+                    const overlayLabel = document.querySelector('.nav-overlay');
+                    if (overlayLabel) {
+                        overlayLabel.click();
+                    } else {
+                        // Fallback: desmarcar directamente
+                        navToggle.checked = false;
+                    }
+                }
+            }
+        }, true);
+        document.addEventListener('touchstart', function (e) {
+            if (navToggle.checked) {
+                const target = e.target;
+                const isHamburger = target.closest('.nav-toggle-button');
+                const isLanguage = target.closest('.language-container');
+                const isNav = target.closest('.header-nav');
+                if (!isHamburger && !isLanguage && !isNav) {
+                    const overlayLabel = document.querySelector('.nav-overlay');
+                    if (overlayLabel) {
+                        overlayLabel.click();
+                    } else {
+                        navToggle.checked = false;
+                    }
+                }
+            }
+        }, { passive: true, capture: true });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navToggle.checked) {
+                navToggle.checked = false;
+            }
+        });
+    }
 });

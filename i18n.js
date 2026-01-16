@@ -217,6 +217,86 @@ const i18n = {
         'Abril 2025': 'April 2025',
         'HTML5, CSS3, JavaScript, LocalStorage': 'HTML5, CSS3, JavaScript, LocalStorage',
         
+        // Elementos dinámicos de Estructura del proyecto y Características
+        'HTML:': 'HTML:',
+        'CSS:': 'CSS:',
+        'JavaScript:': 'JavaScript:',
+        'LocalStorage': 'LocalStorage',
+        'Estructura principal': 'Main structure',
+        'Estilos visuales y animaciones': 'Visual styles and animations',
+        'Lógica del juego y manejo de eventos': 'Game logic and event handling',
+        'Configuración personalizable': 'Customizable configuration',
+        'Diferentes niveles de dificultad': 'Different difficulty levels',
+        'Sistema de puntuación': 'Scoring system',
+        'Diseño responsivo': 'Responsive design',
+        'Soporte multidispositivo': 'Multi-device support',
+        'Interfaz de calculadora': 'Calculator interface',
+        'Área de resultados': 'Results area',
+        'Lógica de cálculo y validación': 'Calculation and validation logic',
+        'Contenedor del mapa': 'Map container',
+        'Controles de interfaz': 'Interface controls',
+        'Elementos interactivos': 'Interactive elements',
+        'Interacción con la API de Google Maps': 'Interaction with the Google Maps API',
+        'Referencia a la API de Google Maps': 'Reference to the Google Maps API',
+        'Estructura básica de la página web': 'Basic structure of the web page',
+        'Estilo visual del mapa': 'Visual style of the map',
+        'Estilo visual de la página web': 'Visual style of the web page',
+        'Lógica para inicializar y configurar el mapa': 'Logic to initialize and configure the map',
+        'Creación y configuración del mapa': 'Creation and configuration of the map',
+        'Manejo de eventos de interacción del usuario': 'Handles user interaction events',
+        'Formulario de entrada': 'Input form',
+        'Interfaz y diseño responsivo': 'Interface and responsive design',
+        'Objeto google.maps.Map': 'google.maps.Map object',
+        'Asociado al elemento HTML': 'Associated with the HTML element',
+        
+        // Google Maps - Contenido dinámico
+        'Visualización de mapas interactivos': 'Interactive map visualization',
+        'Centrado en ubicaciones específicas': 'Centered on specific locations',
+        'Controles de zoom y navegación': 'Zoom and navigation controls',
+        'Posibilidad de añadir marcadores personalizados': 'Ability to add custom markers',
+        'Interfaz limpia y fácil de usar': 'Clean and easy-to-use interface',
+        'Diseño responsivo para diferentes dispositivos': 'Responsive design for different devices',
+        'Integración con servicios de geolocalización': 'Integration with geolocation services',
+        'Personalización de estilos de mapa': 'Map style customization',
+        'Búsqueda de ubicaciones con autocompletado': 'Location search with autocomplete',
+        'Marcadores personalizados en el mapa': 'Custom markers on the map',
+        'Información detallada de ubicaciones': 'Detailed location information',
+        'Diseño responsivo y adaptable': 'Responsive and adaptable design',
+        'Interfaz intuitiva y fácil de usar': 'Intuitive and easy-to-use interface',
+        'Integración con servicios de Google Maps': 'Integration with Google Maps services',
+        'Geolocalización del usuario': 'User geolocation',
+        'Ninguna (Vanilla JS)': 'None (Vanilla JS)',
+        'app.js - Lógica de la aplicación': 'app.js - Application logic',
+        'README.md - Documentación del proyecto': 'README.md - Project documentation',
+        '1. Abre la aplicación en tu navegador': '1. Open the application in your browser',
+        '2. Usa la barra de búsqueda para encontrar una ubicación': '2. Use the search bar to find a location',
+        '3. Haz clic en cualquier punto del mapa para agregar un marcador': '3. Click anywhere on the map to add a marker',
+        '4. Haz clic en un marcador para ver más información': '4. Click on a marker to see more information',
+        '5. Usa los controles del mapa para hacer zoom y moverte': '5. Use the map controls to zoom and move',
+        'Abre la aplicación en tu navegador web': 'Open the application in your web browser',
+        'El mapa se cargará mostrando la ubicación predeterminada': 'The map will load showing the default location',
+        'Usa los controles de zoom para acercar o alejar la vista': 'Use the zoom controls to zoom in or out',
+        'Haz clic y arrastra para moverte por el mapa': 'Click and drag to move around the map',
+        'Los marcadores indican puntos de interés específicos': 'Markers indicate specific points of interest',
+        'Haz clic en un marcador para ver más información': 'Click on a marker to see more information',
+        'Utiliza la barra de búsqueda (si está disponible) para buscar ubicaciones': 'Use the search bar (if available) to search for locations',
+        'La aplicación es completamente responsiva y se adapta a diferentes tamaños de pantalla': 'The application is fully responsive and adapts to different screen sizes',
+        
+        // Google Maps - Descripción y función principal
+        'Aplicación web que muestra un mapa interactivo utilizando la API de Google Maps, permitiendo visualizar ubicaciones específicas y ofreciendo funcionalidades de interacción.': 'Web application that displays an interactive map using the Google Maps API, allowing visualization of specific locations and offering interaction functionalities.',
+        'Aplicación web interactiva que utiliza la API de Google Maps para mostrar ubicaciones y puntos de interés. Desarrollada con JavaScript, incluye funcionalidades como búsqueda de ubicaciones y marcadores personalizados.': 'Interactive web application that uses the Google Maps API to display locations and points of interest. Developed with JavaScript, it includes features like location search and custom markers.',
+        'initMap(): Función que se encarga de crear y configurar el mapa.': 'initMap(): Function responsible for creating and configuring the map.',
+        'Función principal': 'Main Function',
+        
+        // Google Maps - Elementos específicos de initMap y función principal
+        'index.html: Contiene la estructura básica de la página web y la referencia a la API de Google Maps.': 'index.html: Contains the basic structure of the web page and the reference to the Google Maps API.',
+        'style.css: Define el estilo visual del mapa y la página web.': 'style.css: Defines the visual style of the map and the web page.',
+        'script.js: Contiene la lógica para inicializar y configurar el mapa.': 'script.js: Contains the logic to initialize and configure the map.',
+        'Crea un nuevo objeto google.maps.Map asociado al elemento HTML.': 'Creates a new google.maps.Map object associated with the HTML element.',
+        'Configura las opciones del mapa.': 'Configures the map options.',
+        'Puede añadir marcadores personalizados.': 'Can add custom markers.',
+        'Maneja eventos de interacción del usuario.': 'Handles user interaction events.',
+        
         // Calculadora IP
         'Calculadora IP': 'IP Calculator',
         'Calculadora de subredes IP que permite a los usuarios calcular información de red como direcciones de red, direcciones de broadcast, máscara de subred y más.': 'IP subnet calculator that allows users to calculate network information such as network addresses, broadcast addresses, subnet mask and more.',
@@ -261,6 +341,21 @@ const i18n = {
         'Haz clic en un marcador para ver más información': 'Click on a marker to see more information',
         'Utiliza la barra de búsqueda (si está disponible) para buscar ubicaciones': 'Use the search bar (if available) to search for locations',
         'La aplicación es completamente responsiva y se adapta a diferentes tamaños de pantalla': 'The application is fully responsive and adapts to different screen sizes',
+        
+        // Google Maps - Descripción y función principal
+        'Aplicación web que muestra un mapa interactivo utilizando la API de Google Maps, permitiendo visualizar ubicaciones específicas y ofreciendo funcionalidades de interacción.': 'Web application that displays an interactive map using the Google Maps API, allowing visualization of specific locations and offering interaction functionalities.',
+        'Aplicación web interactiva que utiliza la API de Google Maps para mostrar ubicaciones y puntos de interés. Desarrollada con JavaScript, incluye funcionalidades como búsqueda de ubicaciones y marcadores personalizados.': 'Interactive web application that uses the Google Maps API to display locations and points of interest. Developed with JavaScript, it includes features like location search and custom markers.',
+        'initMap(): Función que se encarga de crear y configurar el mapa.': 'initMap(): Function responsible for creating and configuring the map.',
+        'Función principal': 'Main Function',
+        
+        // Google Maps - Elementos específicos de initMap y función principal
+        'index.html: Contiene la estructura básica de la página web y la referencia a la API de Google Maps.': 'index.html: Contains the basic structure of the web page and the reference to the Google Maps API.',
+        'style.css: Define el estilo visual del mapa y la página web.': 'style.css: Defines the visual style of the map and the web page.',
+        'script.js: Contiene la lógica para inicializar y configurar el mapa.': 'script.js: Contains the logic to initialize and configure the map.',
+        'Crea un nuevo objeto google.maps.Map asociado al elemento HTML.': 'Creates a new google.maps.Map object associated with the HTML element.',
+        'Configura las opciones del mapa.': 'Configures the map options.',
+        'Puede añadir marcadores personalizados.': 'Can add custom markers.',
+        'Maneja eventos de interacción del usuario.': 'Handles user interaction events.',
         '1. Abre la aplicación en tu navegador': '1. Open the application in your browser',
         '2. Usa la barra de búsqueda para encontrar una ubicación': '2. Use the search bar to find a location',
         '3. Haz clic en cualquier punto del mapa para agregar un marcador': '3. Click anywhere on the map to add a marker',
@@ -439,4 +534,67 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Actualizar los textos
     updateTexts();
+
+    // Traducir contenido dinámico (listas/resúmenes) si estamos en el detalle de proyecto
+    if (typeof updateProjectDynamicContent === 'function') {
+        updateProjectDynamicContent();
+    }
+
+    const navToggle = document.getElementById('nav-toggle');
+    if (navToggle) {
+        const navToggleButton = document.querySelector('.nav-toggle-button');
+        if (navToggleButton) {
+            navToggleButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                navToggle.checked = !navToggle.checked;
+            });
+        }
+
+        document.querySelectorAll('.header-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.checked = false;
+            });
+        });
+
+        const closeNavIfOpen = () => {
+            if (navToggle.checked) {
+                navToggle.checked = false;
+            }
+        };
+
+        document.addEventListener('click', (e) => {
+            if (!navToggle.checked) return;
+            const target = e.target;
+            if (target && target.closest && (
+                target.closest('.header-nav') ||
+                target.closest('.nav-toggle-button') ||
+                target.closest('.nav-overlay') ||
+                target.closest('.language-container')
+            )) {
+                return;
+            }
+            closeNavIfOpen();
+        });
+
+        document.addEventListener('touchstart', (e) => {
+            if (!navToggle.checked) return;
+            const target = e.target;
+            if (target && target.closest && (
+                target.closest('.header-nav') ||
+                target.closest('.nav-toggle-button') ||
+                target.closest('.nav-overlay') ||
+                target.closest('.language-container')
+            )) {
+                return;
+            }
+            closeNavIfOpen();
+        }, { passive: true });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeNavIfOpen();
+            }
+        });
+    }
 });
