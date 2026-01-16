@@ -297,6 +297,31 @@ const i18n = {
         'Puede añadir marcadores personalizados.': 'Can add custom markers.',
         'Maneja eventos de interacción del usuario.': 'Handles user interaction events.',
         
+        // Memorion - Elementos específicos de estructura y características
+        'index.html - Estructura principal': 'index.html - Main structure',
+        'styles.css - Estilos y animaciones': 'styles.css - Styles and animations',
+        'script.js - Lógica del juego': 'script.js - Game logic',
+        'Formulario de configuración personalizable': 'Customizable configuration form',
+        'Múltiples modos de juego: Normal y Flash': 'Multiple game modes: Normal and Flash',
+        'Tipos de tablero: Predeterminado (4x4, 5x4, 6x6) y personalizado': 'Board types: Default (4x4, 5x4, 6x6) and custom',
+        'Sistema de puntuación y ranking': 'Scoring and ranking system',
+        'Almacenamiento local para clasificaciones': 'Local storage for rankings',
+        'Integración con API de Facebook': 'Facebook API integration',
+        
+        // Calculadora IP - Elementos específicos de resumen de funcionamiento
+        'HTML: Formulario de entrada y área de resultados': 'HTML: Input form and results area',
+        'CSS: Estilos de la interfaz y diseño responsivo': 'CSS: Interface styles and responsive design',
+        'JavaScript: Lógica de cálculo y validación': 'JavaScript: Calculation and validation logic',
+        'Cálculo de direcciones de red': 'Network address calculation',
+        'Validación de direcciones IP': 'IP address validation',
+        'Conversión entre formatos': 'Format conversion',
+        'Diseño responsivo': 'Responsive design',
+        'Diseño responsivo que se adapta a diferentes dispositivos': 'Responsive design that adapts to different devices',
+        'Sin dependencias externas': 'No external dependencies',
+        
+        // Memorion - Tecnologías
+        'LocalStorage': 'LocalStorage',
+        
         // Calculadora IP
         'Calculadora IP': 'IP Calculator',
         'Calculadora de subredes IP que permite a los usuarios calcular información de red como direcciones de red, direcciones de broadcast, máscara de subred y más.': 'IP subnet calculator that allows users to calculate network information such as network addresses, broadcast addresses, subnet mask and more.',
@@ -356,6 +381,31 @@ const i18n = {
         'Configura las opciones del mapa.': 'Configures the map options.',
         'Puede añadir marcadores personalizados.': 'Can add custom markers.',
         'Maneja eventos de interacción del usuario.': 'Handles user interaction events.',
+        
+        // Memorion - Elementos específicos de estructura y características
+        'index.html - Estructura principal': 'index.html - Main structure',
+        'styles.css - Estilos y animaciones': 'styles.css - Styles and animations',
+        'script.js - Lógica del juego': 'script.js - Game logic',
+        'Formulario de configuración personalizable': 'Customizable configuration form',
+        'Múltiples modos de juego: Normal y Flash': 'Multiple game modes: Normal and Flash',
+        'Tipos de tablero: Predeterminado (4x4, 5x4, 6x6) y personalizado': 'Board types: Default (4x4, 5x4, 6x6) and custom',
+        'Sistema de puntuación y ranking': 'Scoring and ranking system',
+        'Almacenamiento local para clasificaciones': 'Local storage for rankings',
+        'Integración con API de Facebook': 'Facebook API integration',
+        
+        // Calculadora IP - Elementos específicos de resumen de funcionamiento
+        'HTML: Formulario de entrada y área de resultados': 'HTML: Input form and results area',
+        'CSS: Estilos de la interfaz y diseño responsivo': 'CSS: Interface styles and responsive design',
+        'JavaScript: Lógica de cálculo y validación': 'JavaScript: Calculation and validation logic',
+        'Cálculo de direcciones de red': 'Network address calculation',
+        'Validación de direcciones IP': 'IP address validation',
+        'Conversión entre formatos': 'Format conversion',
+        'Diseño responsivo': 'Responsive design',
+        'Diseño responsivo que se adapta a diferentes dispositivos': 'Responsive design that adapts to different devices',
+        'Sin dependencias externas': 'No external dependencies',
+        
+        // Memorion - Tecnologías
+        'LocalStorage': 'LocalStorage',
         '1. Abre la aplicación en tu navegador': '1. Open the application in your browser',
         '2. Usa la barra de búsqueda para encontrar una ubicación': '2. Use the search bar to find a location',
         '3. Haz clic en cualquier punto del mapa para agregar un marcador': '3. Click anywhere on the map to add a marker',
@@ -425,6 +475,31 @@ const i18n = {
         'Configura las opciones del mapa.': 'Configures the map options.',
         'Puede añadir marcadores personalizados.': 'Can add custom markers.',
         'Maneja eventos de interacción del usuario.': 'Handles user interaction events.',
+        
+        // Memorion - Elementos específicos de estructura y características
+        'index.html - Estructura principal': 'index.html - Main structure',
+        'styles.css - Estilos y animaciones': 'styles.css - Styles and animations',
+        'script.js - Lógica del juego': 'script.js - Game logic',
+        'Formulario de configuración personalizable': 'Customizable configuration form',
+        'Múltiples modos de juego: Normal y Flash': 'Multiple game modes: Normal and Flash',
+        'Tipos de tablero: Predeterminado (4x4, 5x4, 6x6) y personalizado': 'Board types: Default (4x4, 5x4, 6x6) and custom',
+        'Sistema de puntuación y ranking': 'Scoring and ranking system',
+        'Almacenamiento local para clasificaciones': 'Local storage for rankings',
+        'Integración con API de Facebook': 'Facebook API integration',
+        
+        // Calculadora IP - Elementos específicos de resumen de funcionamiento
+        'HTML: Formulario de entrada y área de resultados': 'HTML: Input form and results area',
+        'CSS: Estilos de la interfaz y diseño responsivo': 'CSS: Interface styles and responsive design',
+        'JavaScript: Lógica de cálculo y validación': 'JavaScript: Calculation and validation logic',
+        'Cálculo de direcciones de red': 'Network address calculation',
+        'Validación de direcciones IP': 'IP address validation',
+        'Conversión entre formatos': 'Format conversion',
+        'Diseño responsivo': 'Responsive design',
+        'Diseño responsivo que se adapta a diferentes dispositivos': 'Responsive design that adapts to different devices',
+        'Sin dependencias externas': 'No external dependencies',
+        
+        // Memorion - Tecnologías
+        'LocalStorage': 'LocalStorage',
         
         // Descripciones técnicas para Calculadora IP
         'HTML: Formulario de entrada y área de resultados': 'HTML: Input form and results area',

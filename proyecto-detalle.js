@@ -363,6 +363,112 @@ function updateProjectDynamicContent() {
             }
         }
         
+        // Actualizar elementos específicos de Memorion
+        if (proyecto.id === 'memorion') {
+            // Actualizar la lista de estructura de Memorion (preservando iconos originales)
+            const memorionStructureList = document.getElementById('memorion-structure-list');
+            if (memorionStructureList) {
+                const structureItems = [
+                    { icon: 'fas fa-code', text: 'HTML: Estructura del tablero y controles' },
+                    { icon: 'fab fa-css3-alt', text: 'CSS: Estilos visuales y animaciones' },
+                    { icon: 'fab fa-js', text: 'JavaScript: Lógica del juego y manejo de eventos' }
+                ];
+                memorionStructureList.innerHTML = structureItems
+                    .map(item => {
+                        const traducida = translateText(item.text);
+                        return `<li><i class="${item.icon}"></i> ${traducida}</li>`;
+                    })
+                    .join('');
+            }
+            
+            // Actualizar la lista de características de Memorion (preservando iconos originales)
+            const memorionFeaturesList = document.getElementById('memorion-features-list');
+            if (memorionFeaturesList) {
+                const featuresItems = [
+                    { icon: 'fas fa-cog', text: 'Configuración personalizable' },
+                    { icon: 'fas fa-tachometer-alt', text: 'Diferentes niveles de dificultad' },
+                    { icon: 'fas fa-trophy', text: 'Sistema de puntuación' },
+                    { icon: 'fas fa-mobile-alt', text: 'Diseño responsivo' }
+                ];
+                memorionFeaturesList.innerHTML = featuresItems
+                    .map(item => {
+                        const traducida = translateText(item.text);
+                        return `<li><i class="${item.icon}"></i> ${traducida}</li>`;
+                    })
+                    .join('');
+            }
+            
+            // Actualizar la lista de tecnologías de Memorion (restaurando iconos originales)
+            const memorionTechList = document.getElementById('tech-list');
+            if (memorionTechList) {
+                const techItems = [
+                    { icon: 'fab fa-js', text: 'JavaScript' },
+                    { icon: 'fab fa-html5', text: 'HTML5' },
+                    { icon: 'fab fa-css3-alt', text: 'CSS3' },
+                    { icon: 'fas fa-database', text: 'LocalStorage' }
+                ];
+                memorionTechList.innerHTML = techItems
+                    .map(item => {
+                        const traducida = translateText(item.text);
+                        return `<li><i class="${item.icon}"></i> ${traducida}</li>`;
+                    })
+                    .join('');
+            }
+        }
+        
+        // Actualizar elementos específicos de la Calculadora IP
+        if (proyecto.id === 'calculadora-ip') {
+            // Actualizar la lista de estructura de la Calculadora
+            const calculadoraStructureList = document.getElementById('calculadora-structure-list');
+            if (calculadoraStructureList) {
+                const structureItems = [
+                    { icon: 'fas fa-code', text: 'HTML: Formulario de entrada y área de resultados' },
+                    { icon: 'fab fa-css3-alt', text: 'CSS: Estilos de la interfaz y diseño responsivo' },
+                    { icon: 'fab fa-js', text: 'JavaScript: Lógica de cálculo y validación' }
+                ];
+                calculadoraStructureList.innerHTML = structureItems
+                    .map(item => {
+                        const traducida = translateText(item.text);
+                        return `<li><i class="${item.icon}"></i> ${traducida}</li>`;
+                    })
+                    .join('');
+            }
+            
+            // Actualizar la lista de características de la Calculadora
+            const calculadoraFeaturesList = document.getElementById('calculadora-features-list');
+            if (calculadoraFeaturesList) {
+                const featuresItems = [
+                    { icon: 'fas fa-network-wired', text: 'Cálculo de direcciones de red' },
+                    { icon: 'fas fa-shield-alt', text: 'Validación de direcciones IP' },
+                    { icon: 'fas fa-exchange-alt', text: 'Conversión entre formatos' },
+                    { icon: 'fas fa-mobile-alt', text: 'Diseño responsivo' }
+                ];
+                calculadoraFeaturesList.innerHTML = featuresItems
+                    .map(item => {
+                        const traducida = translateText(item.text);
+                        return `<li><i class="${item.icon}"></i> ${traducida}</li>`;
+                    })
+                    .join('');
+            }
+            
+            // Actualizar la lista de tecnologías de la Calculadora
+            const calculadoraTechList = document.getElementById('calculadora-tech-list');
+            if (calculadoraTechList) {
+                const techItems = [
+                    { icon: 'fab fa-js', text: 'JavaScript' },
+                    { icon: 'fab fa-html5', text: 'HTML5' },
+                    { icon: 'fab fa-css3-alt', text: 'CSS3' },
+                    { icon: 'fas fa-server', text: 'Sin dependencias externas' }
+                ];
+                calculadoraTechList.innerHTML = techItems
+                    .map(item => {
+                        const traducida = translateText(item.text);
+                        return `<li><i class="${item.icon}"></i> ${traducida}</li>`;
+                    })
+                    .join('');
+            }
+        }
+        
         // Actualizar pasos de juego/uso
         if (proyecto.id === 'memorion' && proyecto.comoJugar) {
             const stepsList = document.getElementById('memorion-steps');
